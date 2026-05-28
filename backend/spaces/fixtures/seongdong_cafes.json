@@ -1,0 +1,4388 @@
+[
+  {
+    "model": "spaces.workspace",
+    "pk": 1,
+    "fields": {
+      "name": "아우프글렛 금호점",
+      "address": "서울 성동구 독서당로51길 7",
+      "latitude": "37.5488664",
+      "longitude": "127.0262200",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 10,
+      "last_scored_at": "2026-05-28T12:27:49.119981+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 2,
+    "fields": {
+      "name": "오아제",
+      "address": "서울 성동구 독서당로 253",
+      "latitude": "37.5461189",
+      "longitude": "127.0179708",
+      "score_plug": 3.0,
+      "score_wifi": 1.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:27:51.952658+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 3,
+    "fields": {
+      "name": "아우어쥬빌리",
+      "address": "서울 성동구 독서당로 269",
+      "latitude": "37.5470233",
+      "longitude": "127.0192599",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 7,
+      "last_scored_at": "2026-05-28T12:27:54.352426+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 4,
+    "fields": {
+      "name": "블레스트",
+      "address": "서울 성동구 무수막길 31",
+      "latitude": "37.5503624",
+      "longitude": "127.0243759",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:29:26.443922+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 5,
+    "fields": {
+      "name": "메가MGC커피 금호역점",
+      "address": "서울 성동구 장터길 30",
+      "latitude": "37.5481974",
+      "longitude": "127.0191471",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 16,
+      "last_scored_at": "2026-05-28T12:29:29.596214+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 6,
+    "fields": {
+      "name": "심재 응봉",
+      "address": "서울 성동구 고산자로2길 4-1",
+      "latitude": "37.5520065",
+      "longitude": "127.0357068",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 12,
+      "last_scored_at": "2026-05-28T12:29:32.303813+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 7,
+    "fields": {
+      "name": "라파리나 금호",
+      "address": "서울 성동구 금호로 67",
+      "latitude": "37.5493530",
+      "longitude": "127.0257448",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 6,
+      "last_scored_at": "2026-05-28T12:29:34.635365+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 8,
+    "fields": {
+      "name": "투썸플레이스 옥수역점",
+      "address": "서울 성동구 독서당로40길 39",
+      "latitude": "37.5416608",
+      "longitude": "127.0177333",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 4,
+      "last_scored_at": "2026-05-28T12:29:37.062802+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 9,
+    "fields": {
+      "name": "프롬하츠커피 서울숲푸르지오점",
+      "address": "서울 성동구 금호로 17",
+      "latitude": "37.5461060",
+      "longitude": "127.0247230",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:29:39.825170+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 10,
+    "fields": {
+      "name": "위윌커피",
+      "address": "서울 성동구 금호로 82",
+      "latitude": "37.5506459",
+      "longitude": "127.0259320",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 5,
+      "last_scored_at": "2026-05-28T12:29:42.254286+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 11,
+    "fields": {
+      "name": "메가MGC커피 응봉현대점",
+      "address": "서울 성동구 독서당로 381",
+      "latitude": "37.5501834",
+      "longitude": "127.0306905",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 1.0,
+      "score_table": 0.0,
+      "total_review_count": 7,
+      "last_scored_at": "2026-05-28T12:29:44.673428+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 12,
+    "fields": {
+      "name": "컴포즈커피 금호사거리점",
+      "address": "서울 성동구 독서당로 327",
+      "latitude": "37.5482250",
+      "longitude": "127.0254253",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 14,
+      "last_scored_at": "2026-05-28T12:29:47.768312+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 13,
+    "fields": {
+      "name": "응봉감성",
+      "address": "서울 성동구 독서당로57길 48",
+      "latitude": "37.5525958",
+      "longitude": "127.0291026",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:29:50.863725+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 14,
+    "fields": {
+      "name": "투썸플레이스 금호하이리버점",
+      "address": "서울 성동구 금호로 105",
+      "latitude": "37.5524617",
+      "longitude": "127.0245011",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:29:53.652128+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 16,
+    "fields": {
+      "name": "메가MGC커피 금호사거리점",
+      "address": "서울 성동구 독서당로 329",
+      "latitude": "37.5482610",
+      "longitude": "127.0255046",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 16,
+      "last_scored_at": "2026-05-28T12:29:56.896513+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 17,
+    "fields": {
+      "name": "블랙빈스카페",
+      "address": "서울 성동구 고산자로 130",
+      "latitude": "37.5516868",
+      "longitude": "127.0355041",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 14,
+      "last_scored_at": "2026-05-28T12:29:59.608893+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 18,
+    "fields": {
+      "name": "센서리커피 로스터스",
+      "address": "서울 성동구 독서당로 315-13",
+      "latitude": "37.5485064",
+      "longitude": "127.0241263",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:30:02.471806+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 19,
+    "fields": {
+      "name": "커스텀커피 금호점",
+      "address": "서울 성동구 금호로 40",
+      "latitude": "37.5466122",
+      "longitude": "127.0254667",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 3,
+      "last_scored_at": "2026-05-28T12:30:04.717353+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 20,
+    "fields": {
+      "name": "윌슨",
+      "address": "서울 성동구 독서당로51길 22-1",
+      "latitude": "37.5500943",
+      "longitude": "127.0266176",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:30:07.880437+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 21,
+    "fields": {
+      "name": "미니다과",
+      "address": "서울 성동구 독서당로48길 4",
+      "latitude": "37.5476816",
+      "longitude": "127.0216093",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:30:11.121400+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 22,
+    "fields": {
+      "name": "하삼동커피 금호역점",
+      "address": "서울 성동구 장터길 34",
+      "latitude": "37.5481748",
+      "longitude": "127.0196122",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 13,
+      "last_scored_at": "2026-05-28T12:30:13.982739+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 23,
+    "fields": {
+      "name": "더벤티 금호점",
+      "address": "서울 성동구 장터길 24",
+      "latitude": "37.5481884",
+      "longitude": "127.0185790",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 1,
+      "last_scored_at": "2026-05-28T12:30:16.163297+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 24,
+    "fields": {
+      "name": "빽다방 금호금남시장점",
+      "address": "서울 성동구 독서당로 296",
+      "latitude": "37.5479987",
+      "longitude": "127.0217543",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:30:18.880910+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 25,
+    "fields": {
+      "name": "지니어스커피바",
+      "address": "서울 성동구 독서당로 290-1",
+      "latitude": "37.5478222",
+      "longitude": "127.0213989",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:30:22.017234+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 27,
+    "fields": {
+      "name": "금호다방",
+      "address": "서울 성동구 금호산2길 22-10",
+      "latitude": "37.5486492",
+      "longitude": "127.0218348",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 15,
+      "last_scored_at": "2026-05-28T12:30:25.211147+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 29,
+    "fields": {
+      "name": "백억커피 금호역점",
+      "address": "서울 성동구 장터길 17-2",
+      "latitude": "37.5484264",
+      "longitude": "127.0178627",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 14,
+      "last_scored_at": "2026-05-28T12:30:29.365583+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 30,
+    "fields": {
+      "name": "요거트퍼플 서울금호점",
+      "address": "서울 성동구 금호로 62-1",
+      "latitude": "37.5489664",
+      "longitude": "127.0261295",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:30:32.436521+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 31,
+    "fields": {
+      "name": "카페5리",
+      "address": "서울 성동구 독서당로 295-2",
+      "latitude": "37.5483536",
+      "longitude": "127.0220656",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 13,
+      "last_scored_at": "2026-05-28T12:30:35.333957+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 32,
+    "fields": {
+      "name": "노리들노리쌤 서울금호점",
+      "address": "서울 성동구 금호로 102",
+      "latitude": "37.5516099",
+      "longitude": "127.0262730",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 17,
+      "last_scored_at": "2026-05-28T12:30:38.394655+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 33,
+    "fields": {
+      "name": "라운지",
+      "address": "서울 성동구 독서당로46길 38-1",
+      "latitude": "37.5479686",
+      "longitude": "127.0234483",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:30:41.525110+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 34,
+    "fields": {
+      "name": "엘림하우스",
+      "address": "서울 성동구 금호산2길 31",
+      "latitude": "37.5487553",
+      "longitude": "127.0230989",
+      "score_plug": 3.0,
+      "score_wifi": 1.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 10,
+      "last_scored_at": "2026-05-28T12:30:44.134039+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 35,
+    "fields": {
+      "name": "데이롱카페 성동금남시장점",
+      "address": "서울 성동구 장터5길 9-3",
+      "latitude": "37.5490953",
+      "longitude": "127.0213099",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 16,
+      "last_scored_at": "2026-05-28T12:30:47.726620+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 37,
+    "fields": {
+      "name": "초코츄츄",
+      "address": "서울 성동구 금호로1길 43",
+      "latitude": "37.5479334",
+      "longitude": "127.0237957",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:30:50.971971+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 38,
+    "fields": {
+      "name": "필라이브",
+      "address": "서울 성동구 금호로 45",
+      "latitude": "37.5474619",
+      "longitude": "127.0252859",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:30:54.001015+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 39,
+    "fields": {
+      "name": "카페만월경 금호점",
+      "address": "서울 성동구 금호로 102",
+      "latitude": "37.5516054",
+      "longitude": "127.0262662",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 17,
+      "last_scored_at": "2026-05-28T12:30:57.069677+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 41,
+    "fields": {
+      "name": "카페그로브",
+      "address": "서울 성동구 금호산길 49-1",
+      "latitude": "37.5526248",
+      "longitude": "127.0192874",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:31:00.022763+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 42,
+    "fields": {
+      "name": "민스블렌드",
+      "address": "서울 성동구 금호산8길 13",
+      "latitude": "37.5505477",
+      "longitude": "127.0213929",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 2,
+      "last_scored_at": "2026-05-28T12:31:02.268230+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 43,
+    "fields": {
+      "name": "헙",
+      "address": "서울 성동구 독서당로 286",
+      "latitude": "37.5475970",
+      "longitude": "127.0209349",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:31:05.233303+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 44,
+    "fields": {
+      "name": "신디테라스",
+      "address": "서울 성동구 장터길 19",
+      "latitude": "37.5484859",
+      "longitude": "127.0180302",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 15,
+      "last_scored_at": "2026-05-28T12:31:08.205634+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 45,
+    "fields": {
+      "name": "로스터리던",
+      "address": "서울 성동구 금호로 74-1",
+      "latitude": "37.5499836",
+      "longitude": "127.0262543",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 12,
+      "last_scored_at": "2026-05-28T12:31:10.742268+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 46,
+    "fields": {
+      "name": "레드버튼 성수점",
+      "address": "서울 성동구 연무장길 17",
+      "latitude": "37.5437359",
+      "longitude": "127.0514541",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 5,
+      "last_scored_at": "2026-05-28T12:31:13.197772+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 47,
+    "fields": {
+      "name": "서울형키즈카페 성수1가1동점",
+      "address": "서울 성동구 뚝섬로3길 18",
+      "latitude": "37.5420292",
+      "longitude": "127.0496855",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 10,
+      "last_scored_at": "2026-05-28T12:31:15.983074+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 48,
+    "fields": {
+      "name": "성수동대림창고갤러리",
+      "address": "서울 성동구 성수이로 78",
+      "latitude": "37.5417200",
+      "longitude": "127.0562482",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:31:19.062252+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 49,
+    "fields": {
+      "name": "캣툰 성수점",
+      "address": "서울 성동구 연무장길 47",
+      "latitude": "37.5427992",
+      "longitude": "127.0547338",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 1,
+      "last_scored_at": "2026-05-28T12:31:21.053833+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 50,
+    "fields": {
+      "name": "히어로보드게임카페 성수점",
+      "address": "서울 성동구 연무장7길 4",
+      "latitude": "37.5430001",
+      "longitude": "127.0546061",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:31:24.338739+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 51,
+    "fields": {
+      "name": "로우키",
+      "address": "서울 성동구 연무장3길 6",
+      "latitude": "37.5441908",
+      "longitude": "127.0515767",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:31:27.314057+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 52,
+    "fields": {
+      "name": "쎈느",
+      "address": "서울 성동구 연무장5길 20",
+      "latitude": "37.5448928",
+      "longitude": "127.0534442",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:31:30.527515+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 53,
+    "fields": {
+      "name": "베통 성수",
+      "address": "서울 성동구 연무장7가길 8",
+      "latitude": "37.5429449",
+      "longitude": "127.0552262",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:31:33.806050+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 54,
+    "fields": {
+      "name": "로우커피스탠드",
+      "address": "서울 성동구 왕십리로4길 28-2",
+      "latitude": "37.5471572",
+      "longitude": "127.0466336",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:31:36.938417+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 55,
+    "fields": {
+      "name": "브루잉세레모니",
+      "address": "서울 성동구 연무장5가길 22-1",
+      "latitude": "37.5432846",
+      "longitude": "127.0551744",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 12,
+      "last_scored_at": "2026-05-28T12:31:39.848328+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 56,
+    "fields": {
+      "name": "서울형키즈카페 시립 서울숲점",
+      "address": "서울 성동구 성수동1가 720",
+      "latitude": "37.5434008",
+      "longitude": "127.0393271",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:31:42.816695+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 57,
+    "fields": {
+      "name": "5TO7",
+      "address": "서울 성동구 서울숲2길 44-13",
+      "latitude": "37.5460826",
+      "longitude": "127.0433219",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:31:45.919791+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 58,
+    "fields": {
+      "name": "천상가옥",
+      "address": "서울 성동구 성수이로14길 14",
+      "latitude": "37.5414079",
+      "longitude": "127.0569087",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:31:49.267913+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 59,
+    "fields": {
+      "name": "슈퍼말차 성수",
+      "address": "서울 성동구 서울숲6길 19",
+      "latitude": "37.5475169",
+      "longitude": "127.0437199",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:31:52.340760+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 60,
+    "fields": {
+      "name": "픽베이크",
+      "address": "서울 성동구 서울숲2길 20-1",
+      "latitude": "37.5469611",
+      "longitude": "127.0409302",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:31:55.283140+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 61,
+    "fields": {
+      "name": "마를리",
+      "address": "서울 성동구 연무장길 47",
+      "latitude": "37.5427802",
+      "longitude": "127.0547451",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:31:58.264321+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 62,
+    "fields": {
+      "name": "본지르르 성수점",
+      "address": "서울 성동구 광나루로4가길 13",
+      "latitude": "37.5493432",
+      "longitude": "127.0546470",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:32:01.606571+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 63,
+    "fields": {
+      "name": "카페&펍 연무장 성수점",
+      "address": "서울 성동구 연무장길 36",
+      "latitude": "37.5428674",
+      "longitude": "127.0533093",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 1.0,
+      "score_table": 0.0,
+      "total_review_count": 2,
+      "last_scored_at": "2026-05-28T12:32:03.810284+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 64,
+    "fields": {
+      "name": "카멜커피 성수점",
+      "address": "서울 성동구 성덕정19길 6",
+      "latitude": "37.5372403",
+      "longitude": "127.0558940",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 13,
+      "last_scored_at": "2026-05-28T12:32:06.637176+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 65,
+    "fields": {
+      "name": "피어커피 성수",
+      "address": "서울 성동구 광나루로4가길 24",
+      "latitude": "37.5489178",
+      "longitude": "127.0548752",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 17,
+      "last_scored_at": "2026-05-28T12:32:09.646412+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 66,
+    "fields": {
+      "name": "따우전드 성수점",
+      "address": "서울 성동구 연무장1길 7",
+      "latitude": "37.5446419",
+      "longitude": "127.0503164",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 13,
+      "last_scored_at": "2026-05-28T12:32:12.413486+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 67,
+    "fields": {
+      "name": "블루보틀 성수 카페",
+      "address": "서울 성동구 아차산로 7",
+      "latitude": "37.5480883",
+      "longitude": "127.0456429",
+      "score_plug": 3.0,
+      "score_wifi": 1.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:32:15.598961+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 68,
+    "fields": {
+      "name": "높은산",
+      "address": "서울 성동구 성수이로 18-1",
+      "latitude": "37.5368555",
+      "longitude": "127.0541400",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:32:18.566678+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 69,
+    "fields": {
+      "name": "메리노",
+      "address": "서울 성동구 서울숲길 24",
+      "latitude": "37.5478786",
+      "longitude": "127.0399914",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:32:21.829837+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 70,
+    "fields": {
+      "name": "메쉬커피",
+      "address": "서울 성동구 서울숲길 43",
+      "latitude": "37.5481192",
+      "longitude": "127.0424540",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:32:25.181317+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 71,
+    "fields": {
+      "name": "파머스카페",
+      "address": "서울 성동구 왕십리로6길 11",
+      "latitude": "37.5460059",
+      "longitude": "127.0460920",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:32:28.181092+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 72,
+    "fields": {
+      "name": "도렐 성수점",
+      "address": "서울 성동구 연무장7길 11",
+      "latitude": "37.5437571",
+      "longitude": "127.0544279",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 12,
+      "last_scored_at": "2026-05-28T12:32:31.082972+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 73,
+    "fields": {
+      "name": "카모플라쥬",
+      "address": "서울 성동구 아차산로1길 9",
+      "latitude": "37.5489866",
+      "longitude": "127.0456841",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:32:34.223323+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 74,
+    "fields": {
+      "name": "업사이드커피 뚝섬점",
+      "address": "서울 성동구 왕십리로14길 19-1",
+      "latitude": "37.5487522",
+      "longitude": "127.0458990",
+      "score_plug": 1.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 1.0,
+      "score_table": 0.0,
+      "total_review_count": 10,
+      "last_scored_at": "2026-05-28T12:32:37.087122+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 75,
+    "fields": {
+      "name": "성수지앵",
+      "address": "서울 성동구 왕십리로 101",
+      "latitude": "37.5466787",
+      "longitude": "127.0442580",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 15,
+      "last_scored_at": "2026-05-28T12:32:39.907727+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 76,
+    "fields": {
+      "name": "옹근달",
+      "address": "서울 성동구 성수이로7길 41-1",
+      "latitude": "37.5427126",
+      "longitude": "127.0529901",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:32:43.005456+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 77,
+    "fields": {
+      "name": "스타벅스 성수역점",
+      "address": "서울 성동구 성수이로 94",
+      "latitude": "37.5431936",
+      "longitude": "127.0569440",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:32:46.407895+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 78,
+    "fields": {
+      "name": "한정선 성수본점",
+      "address": "서울 성동구 연무장길 43-1",
+      "latitude": "37.5429282",
+      "longitude": "127.0541783",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:32:49.582832+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 79,
+    "fields": {
+      "name": "노틀던",
+      "address": "서울 성동구 서울숲2길 11",
+      "latitude": "37.5473830",
+      "longitude": "127.0400308",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 14,
+      "last_scored_at": "2026-05-28T12:32:52.449056+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 80,
+    "fields": {
+      "name": "이리데센트",
+      "address": "서울 성동구 서울숲4길 20-1",
+      "latitude": "37.5471540",
+      "longitude": "127.0431595",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 1.0,
+      "score_table": 5.0,
+      "total_review_count": 17,
+      "last_scored_at": "2026-05-28T12:32:55.610881+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 81,
+    "fields": {
+      "name": "피킹플레져",
+      "address": "서울 성동구 왕십리로14길 19-7",
+      "latitude": "37.5488702",
+      "longitude": "127.0459919",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 17,
+      "last_scored_at": "2026-05-28T12:32:58.593634+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 82,
+    "fields": {
+      "name": "마일스톤커피 성수",
+      "address": "서울 성동구 서울숲4길 15",
+      "latitude": "37.5474469",
+      "longitude": "127.0427863",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:33:01.981236+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 83,
+    "fields": {
+      "name": "클래식 해례커피",
+      "address": "서울 성동구 연무장길 28-20",
+      "latitude": "37.5428192",
+      "longitude": "127.0523090",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:33:05.192462+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 84,
+    "fields": {
+      "name": "맥파이앤타이거 성수티룸",
+      "address": "서울 성동구 성수이로 97",
+      "latitude": "37.5436479",
+      "longitude": "127.0565845",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 10,
+      "last_scored_at": "2026-05-28T12:33:08.116769+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 85,
+    "fields": {
+      "name": "바이닐 성수",
+      "address": "서울 성동구 아차산로 15-8",
+      "latitude": "37.5478682",
+      "longitude": "127.0462153",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:33:11.268220+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 86,
+    "fields": {
+      "name": "밋보어 서울 by 에디션덴마크",
+      "address": "서울 성동구 성수일로 1",
+      "latitude": "37.5408659",
+      "longitude": "127.0478506",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:33:13.993062+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 87,
+    "fields": {
+      "name": "하우스오브바이닐 성수점",
+      "address": "서울 성동구 아차산로7길 29",
+      "latitude": "37.5479067",
+      "longitude": "127.0552106",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 13,
+      "last_scored_at": "2026-05-28T12:33:16.822325+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 88,
+    "fields": {
+      "name": "묘사서울",
+      "address": "서울 성동구 서울숲2길 2",
+      "latitude": "37.5478318",
+      "longitude": "127.0397470",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:33:19.842086+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 89,
+    "fields": {
+      "name": "라에비뉴",
+      "address": "서울 성동구 성수일로10길 33",
+      "latitude": "37.5462918",
+      "longitude": "127.0539409",
+      "score_plug": 5.0,
+      "score_wifi": 5.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:33:23.069309+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 90,
+    "fields": {
+      "name": "너즐",
+      "address": "서울 성동구 서울숲6길 14",
+      "latitude": "37.5475243",
+      "longitude": "127.0430398",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 8,
+      "last_scored_at": "2026-05-28T12:33:25.422827+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 91,
+    "fields": {
+      "name": "놀숲 건대점",
+      "address": "서울 광진구 아차산로 224",
+      "latitude": "37.5406182",
+      "longitude": "127.0679856",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 7,
+      "last_scored_at": "2026-05-28T12:33:27.981635+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 92,
+    "fields": {
+      "name": "벌툰 성수점",
+      "address": "서울 성동구 아차산로 122",
+      "latitude": "37.5438952",
+      "longitude": "127.0575262",
+      "score_plug": 3.0,
+      "score_wifi": 5.0,
+      "score_noise": 1.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:33:30.600233+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 93,
+    "fields": {
+      "name": "히어로보드게임카페 건대본점",
+      "address": "서울 광진구 능동로13길 39",
+      "latitude": "37.5434425",
+      "longitude": "127.0699978",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 12,
+      "last_scored_at": "2026-05-28T12:33:33.613393+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 94,
+    "fields": {
+      "name": "서울형키즈카페 자양4동1호점 꾸미팡팡놀이터",
+      "address": "서울 광진구 능동로 87",
+      "latitude": "37.5391215",
+      "longitude": "127.0696340",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 10,
+      "last_scored_at": "2026-05-28T12:33:36.545255+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 95,
+    "fields": {
+      "name": "놀숲 화양점",
+      "address": "서울 광진구 능동로19길 57",
+      "latitude": "37.5473823",
+      "longitude": "127.0705028",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 2,
+      "last_scored_at": "2026-05-28T12:33:38.725309+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 96,
+    "fields": {
+      "name": "어니언 성수",
+      "address": "서울 성동구 아차산로9길 8",
+      "latitude": "37.5447824",
+      "longitude": "127.0582081",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:33:41.909220+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 97,
+    "fields": {
+      "name": "히어로보드게임카페 어린이대공원점",
+      "address": "서울 광진구 능동로19길 36",
+      "latitude": "37.5474572",
+      "longitude": "127.0718314",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:33:45.159207+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 98,
+    "fields": {
+      "name": "홈즈앤루팡 건대점",
+      "address": "서울 광진구 아차산로 241",
+      "latitude": "37.5405052",
+      "longitude": "127.0701399",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 13,
+      "last_scored_at": "2026-05-28T12:33:48.133275+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 99,
+    "fields": {
+      "name": "히어로보드게임카페 건대1호점",
+      "address": "서울 광진구 아차산로 221",
+      "latitude": "37.5410361",
+      "longitude": "127.0682225",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 12,
+      "last_scored_at": "2026-05-28T12:33:50.920790+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 100,
+    "fields": {
+      "name": "서울형키즈카페 자양4동2호점 꾸미팡팡놀이터",
+      "address": "서울 광진구 능동로 87",
+      "latitude": "37.5391215",
+      "longitude": "127.0696340",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 10,
+      "last_scored_at": "2026-05-28T12:33:54.012506+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 101,
+    "fields": {
+      "name": "도우터",
+      "address": "서울 광진구 아차산로31길 40",
+      "latitude": "37.5426910",
+      "longitude": "127.0701748",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:33:57.109713+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 102,
+    "fields": {
+      "name": "더이퀼리브리엄커피",
+      "address": "서울 광진구 아차산로30길 7",
+      "latitude": "37.5403534",
+      "longitude": "127.0678224",
+      "score_plug": 5.0,
+      "score_wifi": 5.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:34:00.401994+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 103,
+    "fields": {
+      "name": "토즈모임센터 건대점",
+      "address": "서울 광진구 아차산로 207",
+      "latitude": "37.5415776",
+      "longitude": "127.0666196",
+      "score_plug": 5.0,
+      "score_wifi": 5.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:34:03.610462+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 104,
+    "fields": {
+      "name": "인덱스숍",
+      "address": "서울 광진구 아차산로 200",
+      "latitude": "37.5409833",
+      "longitude": "127.0660182",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:34:06.689169+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 105,
+    "fields": {
+      "name": "캣툰 건대점",
+      "address": "서울 광진구 아차산로 213",
+      "latitude": "37.5413782",
+      "longitude": "127.0672010",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 1,
+      "last_scored_at": "2026-05-28T12:34:08.808455+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 106,
+    "fields": {
+      "name": "RSG",
+      "address": "서울 성동구 연무장15길 11",
+      "latitude": "37.5425921",
+      "longitude": "127.0599659",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:34:11.230016+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 107,
+    "fields": {
+      "name": "꼬메노",
+      "address": "서울 광진구 군자로7길 29",
+      "latitude": "37.5455838",
+      "longitude": "127.0691081",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:34:14.346458+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 108,
+    "fields": {
+      "name": "카페라이츠",
+      "address": "서울 광진구 동일로20길 114",
+      "latitude": "37.5395243",
+      "longitude": "127.0695925",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:34:17.273311+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 109,
+    "fields": {
+      "name": "마우스래빗",
+      "address": "서울 광진구 능동로11길 10",
+      "latitude": "37.5419914",
+      "longitude": "127.0709017",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:34:20.317289+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 110,
+    "fields": {
+      "name": "옥루몽 어린이대공원점",
+      "address": "서울 광진구 능동로 183",
+      "latitude": "37.5470172",
+      "longitude": "127.0736676",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 1,
+      "last_scored_at": "2026-05-28T12:34:22.358759+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 111,
+    "fields": {
+      "name": "미어캣족장",
+      "address": "서울 광진구 동일로20길 72",
+      "latitude": "37.5402256",
+      "longitude": "127.0674557",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 3,
+      "last_scored_at": "2026-05-28T12:34:24.814579+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 112,
+    "fields": {
+      "name": "오우드",
+      "address": "서울 성동구 성수이로24길 36",
+      "latitude": "37.5440615",
+      "longitude": "127.0618794",
+      "score_plug": 1.0,
+      "score_wifi": 5.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:34:27.785319+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 113,
+    "fields": {
+      "name": "프롤라",
+      "address": "서울 성동구 연무장17길 5",
+      "latitude": "37.5412671",
+      "longitude": "127.0609436",
+      "score_plug": 1.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 1.0,
+      "score_table": 0.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:34:30.958307+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 114,
+    "fields": {
+      "name": "건대커피랩",
+      "address": "서울 광진구 동일로22길 102",
+      "latitude": "37.5408370",
+      "longitude": "127.0696604",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 17,
+      "last_scored_at": "2026-05-28T12:34:34.133021+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 115,
+    "fields": {
+      "name": "넥스트에디션 건대2호점",
+      "address": "서울 광진구 아차산로 192",
+      "latitude": "37.5415569",
+      "longitude": "127.0649676",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:34:36.897276+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 116,
+    "fields": {
+      "name": "열매제과점",
+      "address": "서울 광진구 동일로24길 31",
+      "latitude": "37.5436353",
+      "longitude": "127.0669564",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:34:40.175090+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 117,
+    "fields": {
+      "name": "오소리베이커리",
+      "address": "서울 광진구 능동로 177",
+      "latitude": "37.5464948",
+      "longitude": "127.0734634",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 14,
+      "last_scored_at": "2026-05-28T12:34:42.939512+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 118,
+    "fields": {
+      "name": "금은방",
+      "address": "서울 성동구 송정14길 1",
+      "latitude": "37.5516796",
+      "longitude": "127.0666388",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:34:46.208946+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 119,
+    "fields": {
+      "name": "도쿄빙수 건대직영점",
+      "address": "서울 광진구 아차산로31길 45",
+      "latitude": "37.5430424",
+      "longitude": "127.0701061",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 14,
+      "last_scored_at": "2026-05-28T12:34:49.083155+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 120,
+    "fields": {
+      "name": "롬곡",
+      "address": "서울 광진구 광나루로17길 18",
+      "latitude": "37.5484775",
+      "longitude": "127.0726392",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:34:52.354832+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 121,
+    "fields": {
+      "name": "카페호이 건대점",
+      "address": "서울 광진구 동일로20길 80",
+      "latitude": "37.5401191",
+      "longitude": "127.0678448",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 9,
+      "last_scored_at": "2026-05-28T12:34:56.475537+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 122,
+    "fields": {
+      "name": "성수율 카페",
+      "address": "서울 성동구 성수이로16길 31",
+      "latitude": "37.5402765",
+      "longitude": "127.0599810",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:34:59.027800+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 123,
+    "fields": {
+      "name": "최가회관",
+      "address": "서울 광진구 능동로13길 30",
+      "latitude": "37.5433665",
+      "longitude": "127.0706156",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:35:02.395786+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 124,
+    "fields": {
+      "name": "아이오쓰리 성수사거리점",
+      "address": "서울 성동구 성수이로20길 60",
+      "latitude": "37.5416444",
+      "longitude": "127.0631436",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 12,
+      "last_scored_at": "2026-05-28T12:35:05.263401+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 125,
+    "fields": {
+      "name": "보드스토리 건대점",
+      "address": "서울 광진구 동일로22길 104",
+      "latitude": "37.5407351",
+      "longitude": "127.0697973",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 12,
+      "last_scored_at": "2026-05-28T12:35:08.043497+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 126,
+    "fields": {
+      "name": "헤이티 건대점",
+      "address": "서울 광진구 동일로20길 50",
+      "latitude": "37.5406083",
+      "longitude": "127.0662963",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 1.0,
+      "score_table": 0.0,
+      "total_review_count": 10,
+      "last_scored_at": "2026-05-28T12:35:10.671035+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 127,
+    "fields": {
+      "name": "하츠하우스",
+      "address": "서울 성동구 송정6길 8",
+      "latitude": "37.5492702",
+      "longitude": "127.0652243",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:35:13.967521+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 128,
+    "fields": {
+      "name": "앤시넌",
+      "address": "서울 광진구 능동로 137-3",
+      "latitude": "37.5432568",
+      "longitude": "127.0717493",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:35:17.032632+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 129,
+    "fields": {
+      "name": "모서리에커피집",
+      "address": "서울 광진구 능동로17길 5",
+      "latitude": "37.5460608",
+      "longitude": "127.0730103",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 14,
+      "last_scored_at": "2026-05-28T12:35:19.812526+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 130,
+    "fields": {
+      "name": "언라인",
+      "address": "서울 성동구 성수이로16길 46",
+      "latitude": "37.5396686",
+      "longitude": "127.0612410",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 14,
+      "last_scored_at": "2026-05-28T12:35:22.775214+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 131,
+    "fields": {
+      "name": "리브릭",
+      "address": "서울 성동구 뚝섬로15길 29",
+      "latitude": "37.5391548",
+      "longitude": "127.0617373",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:35:25.742183+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 132,
+    "fields": {
+      "name": "걈",
+      "address": "서울 광진구 동일로22길 117-9",
+      "latitude": "37.5410743",
+      "longitude": "127.0706021",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 17,
+      "last_scored_at": "2026-05-28T12:35:28.879067+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 133,
+    "fields": {
+      "name": "리얼월드 성수",
+      "address": "서울 성동구 연무장13길 8",
+      "latitude": "37.5421775",
+      "longitude": "127.0584086",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 17,
+      "last_scored_at": "2026-05-28T12:35:31.968634+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 134,
+    "fields": {
+      "name": "우주로캣",
+      "address": "서울 광진구 아차산로 242",
+      "latitude": "37.5399278",
+      "longitude": "127.0699017",
+      "score_plug": 1.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 1.0,
+      "score_table": 0.0,
+      "total_review_count": 7,
+      "last_scored_at": "2026-05-28T12:35:34.264982+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 136,
+    "fields": {
+      "name": "서울형키즈카페 금호2,3가동점",
+      "address": "서울 성동구 무수막18길 1",
+      "latitude": "37.5532030",
+      "longitude": "127.0209319",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 10,
+      "last_scored_at": "2026-05-28T12:35:37.253353+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 137,
+    "fields": {
+      "name": "브라운팟",
+      "address": "서울 성동구 무학봉28길 16",
+      "latitude": "37.5616082",
+      "longitude": "127.0336243",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:35:40.181820+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 138,
+    "fields": {
+      "name": "뜨아아아 커피집",
+      "address": "서울 성동구 고산자로12길 1-1",
+      "latitude": "37.5601860",
+      "longitude": "127.0350407",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:35:43.562485+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 139,
+    "fields": {
+      "name": "브릭하우스",
+      "address": "서울 중구 퇴계로 456",
+      "latitude": "37.5651644",
+      "longitude": "127.0221351",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 17,
+      "last_scored_at": "2026-05-28T12:35:46.424503+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 140,
+    "fields": {
+      "name": "이오프",
+      "address": "서울 중구 다산로42길 18",
+      "latitude": "37.5646697",
+      "longitude": "127.0171898",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 17,
+      "last_scored_at": "2026-05-28T12:35:49.418741+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 141,
+    "fields": {
+      "name": "봉순이네다락방",
+      "address": "서울 성동구 왕십리로21길 13-1",
+      "latitude": "37.5611182",
+      "longitude": "127.0329812",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:35:52.778053+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 142,
+    "fields": {
+      "name": "스타벅스 왕십리역",
+      "address": "서울 성동구 왕십리로 326",
+      "latitude": "37.5626371",
+      "longitude": "127.0338149",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:35:56.084712+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 143,
+    "fields": {
+      "name": "프롬하츠커피 성동구청점",
+      "address": "서울 성동구 고산자로 253",
+      "latitude": "37.5623824",
+      "longitude": "127.0356122",
+      "score_plug": 5.0,
+      "score_wifi": 5.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 14,
+      "last_scored_at": "2026-05-28T12:35:58.987635+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 144,
+    "fields": {
+      "name": "보메 베이커리",
+      "address": "서울 중구 난계로11길 9",
+      "latitude": "37.5657751",
+      "longitude": "127.0229785",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 17,
+      "last_scored_at": "2026-05-28T12:36:06.059083+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 145,
+    "fields": {
+      "name": "마이네임이즈 신당",
+      "address": "서울 중구 퇴계로81길 7-12",
+      "latitude": "37.5661455",
+      "longitude": "127.0176213",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 14,
+      "last_scored_at": "2026-05-28T12:36:08.842482+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 146,
+    "fields": {
+      "name": "심세정",
+      "address": "서울 중구 퇴계로 409-11",
+      "latitude": "37.5660554",
+      "longitude": "127.0170463",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:36:12.017639+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 147,
+    "fields": {
+      "name": "메일룸",
+      "address": "서울 중구 퇴계로83길 10-7",
+      "latitude": "37.5662426",
+      "longitude": "127.0188732",
+      "score_plug": 5.0,
+      "score_wifi": 5.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:36:15.163656+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 148,
+    "fields": {
+      "name": "바이트",
+      "address": "서울 중구 다산로42길 26",
+      "latitude": "37.5645219",
+      "longitude": "127.0177228",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:36:18.182827+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 149,
+    "fields": {
+      "name": "CAFE GREEN",
+      "address": "서울 성동구 왕십리로 410",
+      "latitude": "37.5656614",
+      "longitude": "127.0241545",
+      "score_plug": 5.0,
+      "score_wifi": 5.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:36:21.368254+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 150,
+    "fields": {
+      "name": "나인헤르츠",
+      "address": "서울 성동구 왕십리로 285",
+      "latitude": "37.5597405",
+      "longitude": "127.0363443",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:36:24.420615+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 151,
+    "fields": {
+      "name": "블루제이커피스페이스",
+      "address": "서울 성동구 무학봉15길 20",
+      "latitude": "37.5629388",
+      "longitude": "127.0308994",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 16,
+      "last_scored_at": "2026-05-28T12:36:27.681608+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 152,
+    "fields": {
+      "name": "이유유커피",
+      "address": "서울 중구 퇴계로88길 47",
+      "latitude": "37.5634456",
+      "longitude": "127.0202828",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 10,
+      "last_scored_at": "2026-05-28T12:36:30.211273+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 153,
+    "fields": {
+      "name": "너디블루버로우",
+      "address": "서울 성동구 고산자로12길 15",
+      "latitude": "37.5597028",
+      "longitude": "127.0359685",
+      "score_plug": 5.0,
+      "score_wifi": 5.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:36:34.706581+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 154,
+    "fields": {
+      "name": "나달케이크",
+      "address": "서울 중구 퇴계로87길 15",
+      "latitude": "37.5660854",
+      "longitude": "127.0210306",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 14,
+      "last_scored_at": "2026-05-28T12:36:37.625625+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 155,
+    "fields": {
+      "name": "홍익방",
+      "address": "서울 성동구 무학로10길 24",
+      "latitude": "37.5658195",
+      "longitude": "127.0334994",
+      "score_plug": 1.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 1.0,
+      "score_table": 0.0,
+      "total_review_count": 13,
+      "last_scored_at": "2026-05-28T12:36:40.377868+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 156,
+    "fields": {
+      "name": "무프아파트먼트",
+      "address": "서울 성동구 무학봉길 82",
+      "latitude": "37.5615205",
+      "longitude": "127.0314987",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 16,
+      "last_scored_at": "2026-05-28T12:36:43.235612+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 157,
+    "fields": {
+      "name": "드소영",
+      "address": "서울 성동구 고산자로6길 24",
+      "latitude": "37.5574235",
+      "longitude": "127.0351299",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 10,
+      "last_scored_at": "2026-05-28T12:36:45.801516+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 158,
+    "fields": {
+      "name": "오디오시요거트",
+      "address": "서울 성동구 행당로 125-4",
+      "latitude": "37.5584171",
+      "longitude": "127.0328487",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:36:49.096327+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 159,
+    "fields": {
+      "name": "스타벅스 왕십리역9번출구점",
+      "address": "서울 성동구 고산자로 234",
+      "latitude": "37.5605409",
+      "longitude": "127.0352672",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:36:52.018649+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 160,
+    "fields": {
+      "name": "세라젬웰카페 서울왕십리직영점",
+      "address": "서울 중구 마장로 119",
+      "latitude": "37.5680690",
+      "longitude": "127.0232180",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:36:54.936018+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 161,
+    "fields": {
+      "name": "스타벅스 신금호역점",
+      "address": "서울 성동구 금호로 158-1",
+      "latitude": "37.5549673",
+      "longitude": "127.0201447",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 4,
+      "last_scored_at": "2026-05-28T12:36:57.290276+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 162,
+    "fields": {
+      "name": "스타벅스 황학사거리점",
+      "address": "서울 성동구 왕십리로 410",
+      "latitude": "37.5675878",
+      "longitude": "127.0238212",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 8,
+      "last_scored_at": "2026-05-28T12:36:59.827096+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 163,
+    "fields": {
+      "name": "포레드뮤",
+      "address": "서울 성동구 무학봉길 93-1",
+      "latitude": "37.5624339",
+      "longitude": "127.0320718",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 1,
+      "last_scored_at": "2026-05-28T12:37:01.721164+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 164,
+    "fields": {
+      "name": "투썸플레이스 황학신당역점",
+      "address": "서울 중구 퇴계로 447",
+      "latitude": "37.5658781",
+      "longitude": "127.0216735",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:37:04.747833+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 165,
+    "fields": {
+      "name": "태와재",
+      "address": "서울 중구 퇴계로81길 32",
+      "latitude": "37.5671004",
+      "longitude": "127.0180891",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 1.0,
+      "score_table": 0.0,
+      "total_review_count": 4,
+      "last_scored_at": "2026-05-28T12:37:06.907969+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 166,
+    "fields": {
+      "name": "알티디",
+      "address": "서울 중구 난계로11길 30",
+      "latitude": "37.5664528",
+      "longitude": "127.0223867",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 15,
+      "last_scored_at": "2026-05-28T12:37:09.757251+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 167,
+    "fields": {
+      "name": "바코드커피",
+      "address": "서울 성동구 무학봉15다길 4",
+      "latitude": "37.5623082",
+      "longitude": "127.0305370",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:37:12.808397+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 168,
+    "fields": {
+      "name": "스타벅스 상왕십리역점",
+      "address": "서울 성동구 왕십리로 382",
+      "latitude": "37.5650767",
+      "longitude": "127.0279257",
+      "score_plug": 5.0,
+      "score_wifi": 5.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:37:15.617981+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 169,
+    "fields": {
+      "name": "투썸플레이스 상왕십리역점",
+      "address": "서울 성동구 왕십리로 410",
+      "latitude": "37.5651195",
+      "longitude": "127.0297345",
+      "score_plug": 5.0,
+      "score_wifi": 5.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 4,
+      "last_scored_at": "2026-05-28T12:37:18.066703+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 170,
+    "fields": {
+      "name": "크레스타운 황학점",
+      "address": "서울 중구 난계로 201",
+      "latitude": "37.5696260",
+      "longitude": "127.0232049",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:37:20.943213+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 171,
+    "fields": {
+      "name": "커피엣마켓 신당중앙시장",
+      "address": "서울 중구 퇴계로87길 15-21",
+      "latitude": "37.5661172",
+      "longitude": "127.0199530",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 17,
+      "last_scored_at": "2026-05-28T12:37:24.323124+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 172,
+    "fields": {
+      "name": "이지오어",
+      "address": "서울 성동구 무학봉26길 2",
+      "latitude": "37.5619176",
+      "longitude": "127.0320840",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 13,
+      "last_scored_at": "2026-05-28T12:37:27.039473+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 173,
+    "fields": {
+      "name": "레이지 유스",
+      "address": "서울 성동구 무학로6길 22",
+      "latitude": "37.5650215",
+      "longitude": "127.0325121",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 12,
+      "last_scored_at": "2026-05-28T12:37:29.955164+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 174,
+    "fields": {
+      "name": "바오밥커피로스터스",
+      "address": "서울 성동구 마장로26길 9",
+      "latitude": "37.5656315",
+      "longitude": "127.0354507",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 8,
+      "last_scored_at": "2026-05-28T12:37:32.515001+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 175,
+    "fields": {
+      "name": "올로지",
+      "address": "서울 중구 퇴계로87길 3-8",
+      "latitude": "37.5661215",
+      "longitude": "127.0208948",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:37:35.762427+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 176,
+    "fields": {
+      "name": "비비",
+      "address": "서울 중구 퇴계로83길 10-18",
+      "latitude": "37.5660948",
+      "longitude": "127.0192196",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:37:38.778295+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 177,
+    "fields": {
+      "name": "어폴",
+      "address": "서울 성동구 무학로8길 29",
+      "latitude": "37.5654291",
+      "longitude": "127.0341942",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 16,
+      "last_scored_at": "2026-05-28T12:37:41.627279+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 178,
+    "fields": {
+      "name": "더 카페 신방",
+      "address": "서울 성동구 무학로2길 52",
+      "latitude": "37.5620907",
+      "longitude": "127.0351321",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 10,
+      "last_scored_at": "2026-05-28T12:37:44.190337+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 179,
+    "fields": {
+      "name": "오우뉴",
+      "address": "서울 중구 퇴계로90길 45",
+      "latitude": "37.5633282",
+      "longitude": "127.0218085",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:37:46.746573+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 180,
+    "fields": {
+      "name": "카페27그램",
+      "address": "서울 성동구 무학로6길 4",
+      "latitude": "37.5653139",
+      "longitude": "127.0305337",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 4,
+      "last_scored_at": "2026-05-28T12:37:49.014257+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 181,
+    "fields": {
+      "name": "놀숲 한양대점",
+      "address": "서울 성동구 마조로 11",
+      "latitude": "37.5589786",
+      "longitude": "127.0406900",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 7,
+      "last_scored_at": "2026-05-28T12:37:51.426893+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 182,
+    "fields": {
+      "name": "보드게임카페 레드버튼 한양대점",
+      "address": "서울 성동구 사근동길 4",
+      "latitude": "37.5599649",
+      "longitude": "127.0415801",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 13,
+      "last_scored_at": "2026-05-28T12:37:54.313806+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 183,
+    "fields": {
+      "name": "서울형키즈카페 동대문구새샘공원점",
+      "address": "서울 동대문구 사가정로2길 99",
+      "latitude": "37.5688082",
+      "longitude": "127.0548785",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 10,
+      "last_scored_at": "2026-05-28T12:37:56.877881+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 184,
+    "fields": {
+      "name": "인더매스 왕십리",
+      "address": "서울 성동구 마장로 270",
+      "latitude": "37.5652607",
+      "longitude": "127.0398649",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:38:00.028634+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 185,
+    "fields": {
+      "name": "우리끼리키즈카페 스포츠마을 서울답십리점",
+      "address": "서울 동대문구 전농로 24",
+      "latitude": "37.5669917",
+      "longitude": "127.0568976",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 14,
+      "last_scored_at": "2026-05-28T12:38:03.039963+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 186,
+    "fields": {
+      "name": "타이파",
+      "address": "서울 성동구 마조로 24",
+      "latitude": "37.5598227",
+      "longitude": "127.0413005",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:38:06.363031+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 187,
+    "fields": {
+      "name": "커피나인 본점",
+      "address": "서울 동대문구 전농로3길 12",
+      "latitude": "37.5684182",
+      "longitude": "127.0564924",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:38:09.420808+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 188,
+    "fields": {
+      "name": "스타벅스 답십리역점",
+      "address": "서울 동대문구 천호대로 263",
+      "latitude": "37.5684639",
+      "longitude": "127.0511044",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 10,
+      "last_scored_at": "2026-05-28T12:38:12.213518+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 189,
+    "fields": {
+      "name": "윙보드게임카페",
+      "address": "서울 성동구 마조로 7",
+      "latitude": "37.5585841",
+      "longitude": "127.0404499",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:38:15.358367+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 190,
+    "fields": {
+      "name": "스타벅스 한양대점",
+      "address": "서울 성동구 왕십리로 225",
+      "latitude": "37.5572014",
+      "longitude": "127.0421377",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:38:18.490376+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 191,
+    "fields": {
+      "name": "갈십리",
+      "address": "서울 성동구 마조로 15-11",
+      "latitude": "37.5589247",
+      "longitude": "127.0404455",
+      "score_plug": 3.0,
+      "score_wifi": 5.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 16,
+      "last_scored_at": "2026-05-28T12:38:21.490030+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 192,
+    "fields": {
+      "name": "타로카페 드뷔시산장",
+      "address": "서울 성동구 마조로1길 2",
+      "latitude": "37.5583679",
+      "longitude": "127.0402913",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 5,
+      "last_scored_at": "2026-05-28T12:38:23.780789+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 193,
+    "fields": {
+      "name": "어질인 왕십리역점",
+      "address": "서울 성동구 마조로9길 18",
+      "latitude": "37.5613469",
+      "longitude": "127.0395549",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 13,
+      "last_scored_at": "2026-05-28T12:38:26.886963+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 194,
+    "fields": {
+      "name": "호말커피",
+      "address": "서울 성동구 마조로 15-16",
+      "latitude": "37.5587284",
+      "longitude": "127.0401568",
+      "score_plug": 5.0,
+      "score_wifi": 5.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:38:29.960219+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 195,
+    "fields": {
+      "name": "카페드씨밀레",
+      "address": "서울 성동구 마장로44길 8-18",
+      "latitude": "37.5665427",
+      "longitude": "127.0451629",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 16,
+      "last_scored_at": "2026-05-28T12:38:32.928571+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 196,
+    "fields": {
+      "name": "스타벅스 엔터식스",
+      "address": "서울 성동구 왕십리광장로 17",
+      "latitude": "37.5615311",
+      "longitude": "127.0380859",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 16,
+      "last_scored_at": "2026-05-28T12:38:35.795871+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 197,
+    "fields": {
+      "name": "팀메리",
+      "address": "서울 성동구 마조로11길 5",
+      "latitude": "37.5617492",
+      "longitude": "127.0408115",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:38:38.918274+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 198,
+    "fields": {
+      "name": "메가MGC커피 왕십리점",
+      "address": "서울 성동구 마조로1길 42",
+      "latitude": "37.5611199",
+      "longitude": "127.0393828",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:38:42.451790+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 199,
+    "fields": {
+      "name": "쓰리닷츠",
+      "address": "서울 성동구 마조로 59",
+      "latitude": "37.5631608",
+      "longitude": "127.0415593",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 9,
+      "last_scored_at": "2026-05-28T12:38:44.799367+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 200,
+    "fields": {
+      "name": "더홀릭보드게임카페 왕십리역점",
+      "address": "서울 성동구 마조로 27",
+      "latitude": "37.5602508",
+      "longitude": "127.0408695",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 16,
+      "last_scored_at": "2026-05-28T12:38:47.982450+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 201,
+    "fields": {
+      "name": "그굴",
+      "address": "서울 성동구 마조로3길 9",
+      "latitude": "37.5585655",
+      "longitude": "127.0394482",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:38:50.970968+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 202,
+    "fields": {
+      "name": "유유커피",
+      "address": "서울 성동구 마조로11길 7",
+      "latitude": "37.5617033",
+      "longitude": "127.0407005",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:38:54.117239+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 203,
+    "fields": {
+      "name": "작은카페",
+      "address": "서울 성동구 마조로15나길 19",
+      "latitude": "37.5640350",
+      "longitude": "127.0409689",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:38:57.334136+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 204,
+    "fields": {
+      "name": "카페하인나",
+      "address": "서울 동대문구 전농로 43",
+      "latitude": "37.5688144",
+      "longitude": "127.0568605",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:39:00.363285+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 205,
+    "fields": {
+      "name": "공유 2호점",
+      "address": "서울 성동구 용답25길 22",
+      "latitude": "37.5623697",
+      "longitude": "127.0527471",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:39:03.593470+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 206,
+    "fields": {
+      "name": "카페소재",
+      "address": "서울 성동구 마조로3길 8",
+      "latitude": "37.5586473",
+      "longitude": "127.0399745",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:39:06.518544+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 207,
+    "fields": {
+      "name": "투썸플레이스 왕십리역점",
+      "address": "서울 성동구 왕십리광장로 17",
+      "latitude": "37.5613058",
+      "longitude": "127.0384118",
+      "score_plug": 5.0,
+      "score_wifi": 5.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 12,
+      "last_scored_at": "2026-05-28T12:39:09.589547+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 208,
+    "fields": {
+      "name": "카페시벳",
+      "address": "서울 성동구 마조로11길 17",
+      "latitude": "37.5617037",
+      "longitude": "127.0395280",
+      "score_plug": 5.0,
+      "score_wifi": 5.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 12,
+      "last_scored_at": "2026-05-28T12:39:12.210452+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 209,
+    "fields": {
+      "name": "카페꼬밍",
+      "address": "서울 성동구 마조로11길 11-1",
+      "latitude": "37.5616836",
+      "longitude": "127.0401120",
+      "score_plug": 5.0,
+      "score_wifi": 5.0,
+      "score_noise": 5.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:39:15.425858+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 211,
+    "fields": {
+      "name": "노워리즈",
+      "address": "서울 성동구 용답중앙길 45-2",
+      "latitude": "37.5649634",
+      "longitude": "127.0514155",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 12,
+      "last_scored_at": "2026-05-28T12:39:18.044178+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 212,
+    "fields": {
+      "name": "텐페이지",
+      "address": "서울 성동구 마조로1가길 6",
+      "latitude": "37.5603196",
+      "longitude": "127.0397672",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:39:21.068864+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 213,
+    "fields": {
+      "name": "투썸플레이스 답십리점",
+      "address": "서울 동대문구 고미술로 81",
+      "latitude": "37.5657453",
+      "longitude": "127.0556652",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:39:23.961741+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 214,
+    "fields": {
+      "name": "부루커피",
+      "address": "서울 성동구 용답길 169-1",
+      "latitude": "37.5637909",
+      "longitude": "127.0559863",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:39:27.037912+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 215,
+    "fields": {
+      "name": "설빙 한양대점",
+      "address": "서울 성동구 마조로 9",
+      "latitude": "37.5587084",
+      "longitude": "127.0405540",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 12,
+      "last_scored_at": "2026-05-28T12:39:29.946322+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 216,
+    "fields": {
+      "name": "어거스트 칠사일",
+      "address": "서울 성동구 마조로9길 6-3",
+      "latitude": "37.5613798",
+      "longitude": "127.0408215",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 15,
+      "last_scored_at": "2026-05-28T12:39:32.692170+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 217,
+    "fields": {
+      "name": "투썸플레이스 용답역점",
+      "address": "서울 성동구 용답길 85",
+      "latitude": "37.5623730",
+      "longitude": "127.0515394",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 10,
+      "last_scored_at": "2026-05-28T12:39:35.669941+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 219,
+    "fields": {
+      "name": "츄로's coffee&ice cream 왕십리점",
+      "address": "서울 성동구 마조로11길 9",
+      "latitude": "37.5617033",
+      "longitude": "127.0404764",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 15,
+      "last_scored_at": "2026-05-28T12:39:38.641573+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 220,
+    "fields": {
+      "name": "킨들",
+      "address": "서울 성동구 용답19길 2-2",
+      "latitude": "37.5625045",
+      "longitude": "127.0515406",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:39:41.674875+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 221,
+    "fields": {
+      "name": "루플레",
+      "address": "서울 성동구 마조로3길 3",
+      "latitude": "37.5584418",
+      "longitude": "127.0401578",
+      "score_plug": 5.0,
+      "score_wifi": 5.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:39:44.313709+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 222,
+    "fields": {
+      "name": "브릭스커피",
+      "address": "서울 성동구 마조로11길 13",
+      "latitude": "37.5617107",
+      "longitude": "127.0399422",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:39:47.428828+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 223,
+    "fields": {
+      "name": "카페루보브",
+      "address": "서울 성동구 마조로1길 6",
+      "latitude": "37.5582914",
+      "longitude": "127.0399743",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 14,
+      "last_scored_at": "2026-05-28T12:39:50.163203+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 224,
+    "fields": {
+      "name": "와츠폴",
+      "address": "서울 성동구 마조로15길 16",
+      "latitude": "37.5637668",
+      "longitude": "127.0399761",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:39:52.803381+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 225,
+    "fields": {
+      "name": "부엉이젤라또",
+      "address": "서울 성동구 천호대로 244",
+      "latitude": "37.5692967",
+      "longitude": "127.0482638",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:39:56.112213+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 226,
+    "fields": {
+      "name": "DCC카페 (다이스라떼)",
+      "address": "서울 동대문구 천호대로83길 93",
+      "latitude": "37.5661658",
+      "longitude": "127.0666947",
+      "score_plug": 1.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 1.0,
+      "score_table": 0.0,
+      "total_review_count": 17,
+      "last_scored_at": "2026-05-28T12:39:59.087707+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 227,
+    "fields": {
+      "name": "스타벅스 장한평역점",
+      "address": "서울 동대문구 장한로 10",
+      "latitude": "37.5622904",
+      "longitude": "127.0654157",
+      "score_plug": 5.0,
+      "score_wifi": 5.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 13,
+      "last_scored_at": "2026-05-28T12:40:02.102163+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 228,
+    "fields": {
+      "name": "정화",
+      "address": "서울 동대문구 장한로17길 25",
+      "latitude": "37.5676368",
+      "longitude": "127.0672076",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:40:05.091612+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 229,
+    "fields": {
+      "name": "로쿠커피",
+      "address": "서울 광진구 군자로15길 14",
+      "latitude": "37.5540361",
+      "longitude": "127.0734821",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:40:08.367856+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 230,
+    "fields": {
+      "name": "투썸플레이스 장안점",
+      "address": "서울 동대문구 장한로 73",
+      "latitude": "37.5675289",
+      "longitude": "127.0683768",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 2,
+      "last_scored_at": "2026-05-28T12:40:12.974488+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 231,
+    "fields": {
+      "name": "단지커피",
+      "address": "서울 광진구 군자로 133-1",
+      "latitude": "37.5539744",
+      "longitude": "127.0742131",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:40:16.048618+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 232,
+    "fields": {
+      "name": "로프커피",
+      "address": "서울 광진구 동일로 304",
+      "latitude": "37.5582528",
+      "longitude": "127.0734749",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:40:19.455001+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 234,
+    "fields": {
+      "name": "디그딥",
+      "address": "서울 동대문구 장한로17길 13-8",
+      "latitude": "37.5672196",
+      "longitude": "127.0673974",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 13,
+      "last_scored_at": "2026-05-28T12:40:22.103245+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 235,
+    "fields": {
+      "name": "디어테이블",
+      "address": "서울 동대문구 답십리로72길 68",
+      "latitude": "37.5692453",
+      "longitude": "127.0729537",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:40:25.161319+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 236,
+    "fields": {
+      "name": "스타벅스 답십리초교사거리점",
+      "address": "서울 동대문구 전농로 38",
+      "latitude": "37.5682088",
+      "longitude": "127.0572302",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 10,
+      "last_scored_at": "2026-05-28T12:40:28.027278+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 237,
+    "fields": {
+      "name": "쿄우커피",
+      "address": "서울 동대문구 천호대로83길 22",
+      "latitude": "37.5631773",
+      "longitude": "127.0649263",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:40:31.305125+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 238,
+    "fields": {
+      "name": "바른커피",
+      "address": "서울 동대문구 천호대로81길 8",
+      "latitude": "37.5627021",
+      "longitude": "127.0639718",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:40:34.580034+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 239,
+    "fields": {
+      "name": "탐앤탐스 장한평역점",
+      "address": "서울 동대문구 장한로 20",
+      "latitude": "37.5629794",
+      "longitude": "127.0659844",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 7,
+      "last_scored_at": "2026-05-28T12:40:37.039687+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 240,
+    "fields": {
+      "name": "카페 트위그",
+      "address": "서울 동대문구 한천로 10",
+      "latitude": "37.5635814",
+      "longitude": "127.0588373",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 17,
+      "last_scored_at": "2026-05-28T12:40:40.200336+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 241,
+    "fields": {
+      "name": "쿤스",
+      "address": "서울 광진구 동일로 288",
+      "latitude": "37.5569450",
+      "longitude": "127.0727527",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 13,
+      "last_scored_at": "2026-05-28T12:40:42.881728+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 242,
+    "fields": {
+      "name": "브루나루커피바",
+      "address": "서울 성동구 동일로59가길 1",
+      "latitude": "37.5580636",
+      "longitude": "127.0719547",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 16,
+      "last_scored_at": "2026-05-28T12:40:45.952102+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 243,
+    "fields": {
+      "name": "메가MGC커피 장한평자동차거리점",
+      "address": "서울 성동구 천호대로 426",
+      "latitude": "37.5608943",
+      "longitude": "127.0662293",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 16,
+      "last_scored_at": "2026-05-28T12:40:49.150927+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 244,
+    "fields": {
+      "name": "백억커피 장안점",
+      "address": "서울 동대문구 한천로18길 9",
+      "latitude": "37.5691132",
+      "longitude": "127.0646123",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 2,
+      "last_scored_at": "2026-05-28T12:40:51.295656+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 245,
+    "fields": {
+      "name": "사브레",
+      "address": "서울 동대문구 장한로6길 18",
+      "latitude": "37.5632868",
+      "longitude": "127.0671471",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 19,
+      "last_scored_at": "2026-05-28T12:40:54.175040+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 246,
+    "fields": {
+      "name": "비바라비다",
+      "address": "서울 동대문구 천호대로81길 32",
+      "latitude": "37.5637000",
+      "longitude": "127.0645952",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:40:57.520454+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 247,
+    "fields": {
+      "name": "이디야커피 장한평군자초교점",
+      "address": "서울 동대문구 한천로2길 53",
+      "latitude": "37.5628368",
+      "longitude": "127.0614094",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 10,
+      "last_scored_at": "2026-05-28T12:41:00.406528+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 248,
+    "fields": {
+      "name": "이비비",
+      "address": "서울 동대문구 천호대로81길 14",
+      "latitude": "37.5629272",
+      "longitude": "127.0640772",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 3,
+      "last_scored_at": "2026-05-28T12:41:02.740584+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 249,
+    "fields": {
+      "name": "메가MGC커피 장한평역점",
+      "address": "서울 동대문구 천호대로85길 10",
+      "latitude": "37.5624449",
+      "longitude": "127.0662126",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 15,
+      "last_scored_at": "2026-05-28T12:41:05.729897+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 250,
+    "fields": {
+      "name": "각자의연유",
+      "address": "서울 동대문구 장한로 54",
+      "latitude": "37.5657884",
+      "longitude": "127.0679677",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:41:08.969255+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 251,
+    "fields": {
+      "name": "그리팅",
+      "address": "서울 동대문구 천호대로83길 9",
+      "latitude": "37.5627740",
+      "longitude": "127.0643272",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 1.0,
+      "score_table": 0.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:41:11.957043+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 252,
+    "fields": {
+      "name": "멜로우시티 2nd",
+      "address": "서울 동대문구 장안벚꽃로 107",
+      "latitude": "37.5680630",
+      "longitude": "127.0732129",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 3,
+      "last_scored_at": "2026-05-28T12:41:14.377079+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 254,
+    "fields": {
+      "name": "빽다방 장안뉴시티점",
+      "address": "서울 동대문구 장한로 105",
+      "latitude": "37.5699679",
+      "longitude": "127.0699660",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 10,
+      "last_scored_at": "2026-05-28T12:41:17.091576+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 255,
+    "fields": {
+      "name": "투썸플레이스 장한평역점",
+      "address": "서울 성동구 천호대로 416",
+      "latitude": "37.5609932",
+      "longitude": "127.0651010",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 7,
+      "last_scored_at": "2026-05-28T12:41:19.843250+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 256,
+    "fields": {
+      "name": "모타르트",
+      "address": "서울 동대문구 답십리로48길 78",
+      "latitude": "37.5692700",
+      "longitude": "127.0575480",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 17,
+      "last_scored_at": "2026-05-28T12:41:22.602527+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 257,
+    "fields": {
+      "name": "장안생활카페",
+      "address": "서울 동대문구 천호대로89길 9",
+      "latitude": "37.5622835",
+      "longitude": "127.0680574",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:41:25.780416+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 260,
+    "fields": {
+      "name": "멜로위크",
+      "address": "서울 동대문구 천호대로87길 13-3",
+      "latitude": "37.5626579",
+      "longitude": "127.0672258",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 12,
+      "last_scored_at": "2026-05-28T12:41:28.547608+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 261,
+    "fields": {
+      "name": "하이어그라운드",
+      "address": "서울 동대문구 천호대로91길 57",
+      "latitude": "37.5641647",
+      "longitude": "127.0698350",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 12,
+      "last_scored_at": "2026-05-28T12:41:31.209616+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 262,
+    "fields": {
+      "name": "아띠커피",
+      "address": "서울 동대문구 황물로15길 32",
+      "latitude": "37.5659196",
+      "longitude": "127.0585777",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 1.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 20,
+      "last_scored_at": "2026-05-28T12:41:34.376664+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 263,
+    "fields": {
+      "name": "7773카페&베이커리",
+      "address": "서울 동대문구 한천로18길 15",
+      "latitude": "37.5689112",
+      "longitude": "127.0649324",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 13,
+      "last_scored_at": "2026-05-28T12:41:37.337841+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 264,
+    "fields": {
+      "name": "도도키즈룸",
+      "address": "서울 동대문구 장한로18길 57",
+      "latitude": "37.5678295",
+      "longitude": "127.0720671",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 5.0,
+      "total_review_count": 10,
+      "last_scored_at": "2026-05-28T12:41:39.969491+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 265,
+    "fields": {
+      "name": "커핀테라",
+      "address": "서울 동대문구 한천로2길 95",
+      "latitude": "37.5625481",
+      "longitude": "127.0638268",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 5.0,
+      "total_review_count": 11,
+      "last_scored_at": "2026-05-28T12:41:42.602710+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 266,
+    "fields": {
+      "name": "컴포즈커피 장안중앙점",
+      "address": "서울 동대문구 장한로 99",
+      "latitude": "37.5696482",
+      "longitude": "127.0697597",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 15,
+      "last_scored_at": "2026-05-28T12:41:45.750172+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 267,
+    "fields": {
+      "name": "이디야커피 장안중랑천점",
+      "address": "서울 동대문구 장한로18길 32",
+      "latitude": "37.5675347",
+      "longitude": "127.0707674",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 18,
+      "last_scored_at": "2026-05-28T12:41:49.130230+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 268,
+    "fields": {
+      "name": "브루드웨이",
+      "address": "서울 동대문구 장한로14길 8",
+      "latitude": "37.5662530",
+      "longitude": "127.0685499",
+      "score_plug": 5.0,
+      "score_wifi": 3.0,
+      "score_noise": 5.0,
+      "score_comfort": 5.0,
+      "score_table": 0.0,
+      "total_review_count": 9,
+      "last_scored_at": "2026-05-28T12:41:51.792017+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 269,
+    "fields": {
+      "name": "애즈유주얼",
+      "address": "서울 동대문구 천호대로79길 53",
+      "latitude": "37.5647312",
+      "longitude": "127.0638739",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 7,
+      "last_scored_at": "2026-05-28T12:41:54.048289+00:00"
+    }
+  },
+  {
+    "model": "spaces.workspace",
+    "pk": 270,
+    "fields": {
+      "name": "메가MGC커피 장안중앙점",
+      "address": "서울 동대문구 장한로 58",
+      "latitude": "37.5661154",
+      "longitude": "127.0680710",
+      "score_plug": 3.0,
+      "score_wifi": 3.0,
+      "score_noise": 3.0,
+      "score_comfort": 3.0,
+      "score_table": 0.0,
+      "total_review_count": 17,
+      "last_scored_at": "2026-05-28T12:41:57.332868+00:00"
+    }
+  }
+]
