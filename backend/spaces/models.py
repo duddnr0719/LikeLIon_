@@ -1,5 +1,11 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.core.exceptions import ValidationError
+
+
+def validate_half_step(value):
+    if (value * 2) % 1 != 0:
+        raise ValidationError("별점은 0.5 단위로만 입력할 수 있습니다. (예: 1, 1.5, 2, …, 5)")
 
 
 class Workspace(models.Model):
@@ -17,6 +23,10 @@ class Workspace(models.Model):
 
     total_review_count = models.PositiveIntegerField(default=0)
     last_scored_at = models.DateTimeField(null=True, blank=True)
+
+    kakao_place_id = models.CharField(max_length=50, null=True, blank=True)
+    phone = models.CharField(max_length=50, null=True, blank=True)
+    kakao_url = models.CharField(max_length=500, null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -39,13 +49,12 @@ class CafeReviewRaw(models.Model):
 
 class SpaceReview(models.Model):
     workspace = models.ForeignKey(Workspace, on_delete=models.CASCADE, related_name='reviews')
-    author = models.CharField(max_length=100)
-    rating_infrastructure = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
-    rating_atmosphere = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
-    rating_furniture = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
-    rating_comfort = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
+    score_plug = models.FloatField(validators=[MinValueValidator(1), MaxValueValidator(5), validate_half_step])
+    score_wifi = models.FloatField(validators=[MinValueValidator(1), MaxValueValidator(5), validate_half_step])
+    score_noise = models.FloatField(validators=[MinValueValidator(1), MaxValueValidator(5), validate_half_step])
+    score_comfort = models.FloatField(validators=[MinValueValidator(1), MaxValueValidator(5), validate_half_step])
     comment = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.workspace.name} - {self.author} ({self.created_at.date()})"
+        return f"{self.workspace.name} ({self.created_at.date()})"
