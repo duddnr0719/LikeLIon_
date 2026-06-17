@@ -86,7 +86,54 @@ GET /api/spaces/?min_score_plug=4&min_score_wifi=4&ordering=-score_comfort
     "score_comfort": 5.0,
     "score_table": 5.0,
     "total_review_count": 10,
-    "last_scored_at": "2026-05-28T12:27:49Z"
+    "last_scored_at": "2026-05-28T12:27:49Z",
+    "kakao_place_id": "2030999010",
+    "phone": "070-7713-0211",
+    "kakao_url": "http://place.map.kakao.com/2030999010"
+  }
+]
+```
+
+---
+
+## 사용자 리뷰 API
+
+### 리뷰 작성
+```
+POST /api/spaces/{id}/reviews/
+```
+
+```json
+{
+  "score_plug": 4.5,
+  "score_wifi": 3.0,
+  "score_noise": 4.0,
+  "score_comfort": 5.0,
+  "comment": "콘센트 자리마다 있고 조용해서 좋아요"
+}
+```
+
+- 점수는 **1~5, 0.5 단위**만 허용 (예: 1, 1.5, 2 … 5)
+- `comment`는 선택 입력
+
+### 리뷰 목록 조회
+```
+GET /api/spaces/{id}/reviews/
+```
+
+### 응답 예시
+
+```json
+[
+  {
+    "id": 1,
+    "workspace": 1,
+    "score_plug": 4.5,
+    "score_wifi": 3.0,
+    "score_noise": 4.0,
+    "score_comfort": 5.0,
+    "comment": "콘센트 자리마다 있고 조용해서 좋아요",
+    "created_at": "2026-06-17T21:08:41+09:00"
   }
 ]
 ```
@@ -115,7 +162,11 @@ GET /api/spaces/?min_score_plug=4&min_score_wifi=4&ordering=-score_comfort
 python manage.py fetch_cafes        # 카카오맵 API로 카페 목록 수집
 python manage.py crawl_reviews      # 네이버 블로그 리뷰 크롤링
 python manage.py score_workspaces   # L40 GPU 서버(Qwen3.5:122b)로 점수화
+python manage.py enrich_cafes       # 카카오 API로 전화번호·URL 등 추가 정보 수집
 ```
+
+- `enrich_cafes`는 `KAKAO_REST_API_KEY`만 있으면 실행 가능
+- `--limit N` 옵션으로 일부만 처리, `--force`로 재처리
 
 주간 자동 업데이트는 crontab에 등록되어 있습니다 (매주 월요일 03:00).
 
