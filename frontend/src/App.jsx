@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import CafeList from './components/CafeList'
 import CategoryPrioritySelector from './components/CategoryPrioritySelector'
 import WorkspaceMarker from './components/WorkspaceMarker'
@@ -6,6 +6,13 @@ import './App.css'
 
 const API_BASE = 'http://localhost:8000'
 const SEONGDONG_CENTER = { lat: 37.5633, lng: 127.0371 }
+
+// 바텀시트 높이 단계 (vh 기준)
+const SNAP_POINTS = {
+  collapsed: 15,   // 핸들만 보임
+  half: 45,        // 절반
+  full: 85,        // 거의 전체
+}
 
 function App() {
   const [cafes, setCafes] = useState([])
@@ -15,6 +22,13 @@ function App() {
   const [activeCafe, setActiveCafe] = useState(null)
   const [map, setMap] = useState(null)
   const [mobilePanel, setMobilePanel] = useState(false)
+
+  // 바텀시트 드래그 상태
+  const [sheetHeight, setSheetHeight] = useState(SNAP_POINTS.half)
+  const isDragging = useRef(false)
+  const startY = useRef(0)
+  const startHeight = useRef(0)
+  const sheetRef = useRef(null)
   const mapRef = useRef(null)
 
   // 카카오맵 초기화
@@ -29,16 +43,15 @@ function App() {
         setMap(kakaoMap)
       })
     }
-    if (window.kakao?.maps) {
-      init()
-    } else {
+    if (window.kakao?.maps) init()
+    else {
       const script = document.querySelector('script[src*="dapi.kakao.com"]')
       script?.addEventListener('load', init)
       return () => script?.removeEventListener('load', init)
     }
   }, [])
 
-  // 카페 데이터 불러오기
+  // 카페 데이터
   useEffect(() => {
     fetch(`${API_BASE}/api/spaces/`)
       .then((r) => { if (!r.ok) throw new Error(`서버 오류 ${r.status}`); return r.json() })
@@ -56,6 +69,60 @@ function App() {
       ))
     }
   }
+
+  // 드래그 시작
+  const onDragStart = useCallback((clientY) => {
+    isDragging.current = true
+    startY.current = clientY
+    startHeight.current = sheetHeight
+    document.body.style.userSelect = 'none'
+  }, [sheetHeight])
+
+  // 드래그 중
+  const onDragMove = useCallback((clientY) => {
+    if (!isDragging.current) return
+    const deltaY = startY.current - clientY
+    const deltaVh = (deltaY / window.innerHeight) * 100
+    const newHeight = Math.min(SNAP_POINTS.full, Math.max(SNAP_POINTS.collapsed, startHeight.current + deltaVh))
+    setSheetHeight(newHeight)
+  }, [])
+
+  // 드래그 끝 → 가장 가까운 스냅 포인트로
+  const onDragEnd = useCallback(() => {
+    if (!isDragging.current) return
+    isDragging.current = false
+    document.body.style.userSelect = ''
+
+    const points = Object.values(SNAP_POINTS)
+    const closest = points.reduce((prev, curr) =>
+      Math.abs(curr - sheetHeight) < Math.abs(prev - sheetHeight) ? curr : prev
+    )
+    setSheetHeight(closest)
+  }, [sheetHeight])
+
+  // 마우스 이벤트
+  useEffect(() => {
+    const onMove = (e) => onDragMove(e.clientY)
+    const onEnd = () => onDragEnd()
+    window.addEventListener('mousemove', onMove)
+    window.addEventListener('mouseup', onEnd)
+    return () => {
+      window.removeEventListener('mousemove', onMove)
+      window.removeEventListener('mouseup', onEnd)
+    }
+  }, [onDragMove, onDragEnd])
+
+  // 터치 이벤트
+  useEffect(() => {
+    const onMove = (e) => onDragMove(e.touches[0].clientY)
+    const onEnd = () => onDragEnd()
+    window.addEventListener('touchmove', onMove, { passive: true })
+    window.addEventListener('touchend', onEnd)
+    return () => {
+      window.removeEventListener('touchmove', onMove)
+      window.removeEventListener('touchend', onEnd)
+    }
+  }, [onDragMove, onDragEnd])
 
   return (
     <div className="app-root">
@@ -107,51 +174,57 @@ function App() {
               if (order.length === 5) setMobilePanel(false)
             }}
           />
-          <button
-            className="priority-reset"
-            style={{ marginTop: 12 }}
-            onClick={() => setMobilePanel(false)}
-          >
+          <button className="priority-reset" style={{ marginTop: 12 }} onClick={() => setMobilePanel(false)}>
             닫기
           </button>
         </div>
       )}
 
-      {/* 플로팅 하단 카페 목록 */}
-      <div className="float-list">
-        <div className="list-handle" />
-        <div className="list-top">
-          <span className="list-title">
-            {priorityOrder.length === 5 ? '🎯 최적 카페 순위' : '카페 목록'}
-          </span>
-          {!loading && (
-            <span className="list-count">{cafes.length}곳</span>
-          )}
+      {/* 드래그 가능한 바텀시트 */}
+      <div
+        ref={sheetRef}
+        className="bottom-sheet"
+        style={{ height: `${sheetHeight}vh` }}
+      >
+        {/* 드래그 핸들 */}
+        <div
+          className="sheet-handle-area"
+          onMouseDown={(e) => onDragStart(e.clientY)}
+          onTouchStart={(e) => onDragStart(e.touches[0].clientY)}
+        >
+          <div className="list-handle" />
+          <div className="list-top">
+            <span className="list-title">
+              {priorityOrder.length === 5 ? '🎯 최적 카페 순위' : '카페 목록'}
+            </span>
+            {!loading && <span className="list-count">{cafes.length}곳</span>}
+          </div>
         </div>
 
-        {loading && (
-          <div className="empty-state">
-            <div className="spinner" />
-            <p>카페 불러오는 중</p>
-          </div>
-        )}
-
-        {error && (
-          <div className="empty-state">
-            <span className="empty-state-icon">⚠️</span>
-            <p>백엔드 서버에 연결할 수 없어요</p>
-            <small>{error}</small>
-          </div>
-        )}
-
-        {!loading && !error && (
-          <CafeList
-            cafes={cafes}
-            priorityOrder={priorityOrder}
-            activeCafeId={activeCafe?.id}
-            onCafeClick={handleCafeClick}
-          />
-        )}
+        {/* 스크롤 가능한 카드 영역 */}
+        <div className="sheet-scroll">
+          {loading && (
+            <div className="empty-state">
+              <div className="spinner" />
+              <p>카페 불러오는 중</p>
+            </div>
+          )}
+          {error && (
+            <div className="empty-state">
+              <span className="empty-state-icon">⚠️</span>
+              <p>백엔드 서버에 연결할 수 없어요</p>
+              <small>{error}</small>
+            </div>
+          )}
+          {!loading && !error && (
+            <CafeList
+              cafes={cafes}
+              priorityOrder={priorityOrder}
+              activeCafeId={activeCafe?.id}
+              onCafeClick={handleCafeClick}
+            />
+          )}
+        </div>
       </div>
     </div>
   )

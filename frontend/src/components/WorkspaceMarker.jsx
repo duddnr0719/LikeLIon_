@@ -1,8 +1,7 @@
 import { useEffect, useRef } from 'react'
-import { SCORE_CATEGORIES, calcWeightedScore } from '../constants/scoreConfig'
+import { SCORE_CATEGORIES } from '../constants/scoreConfig'
 
 function WorkspaceMarker({ map, cafe, priorityOrder, isActive, onClick }) {
-  const markerRef = useRef(null)
   const overlayRef = useRef(null)
 
   useEffect(() => {
@@ -13,57 +12,46 @@ function WorkspaceMarker({ map, cafe, priorityOrder, isActive, onClick }) {
       parseFloat(cafe.longitude)
     )
 
-    // 마커에 표시할 이모지 결정
-    // 우선순위 1위 카테고리 이모지를 보여줌, 없으면 ☕
-    const topCat = priorityOrder[0]
-      ? SCORE_CATEGORIES.find((c) => c.key === priorityOrder[0])
-      : null
-    const emoji = topCat ? topCat.emoji : '☕'
+    // 마커 DOM 직접 생성 (문자열 아님 → 클릭 이벤트 정상 작동)
+    const container = document.createElement('div')
+    container.className = `map-marker${isActive ? ' active' : ''}`
 
-    // 가중치 점수 (우선순위 완성 시)
-    const scoreText =
-      priorityOrder.length === 5
-        ? `${(calcWeightedScore(cafe, priorityOrder) * 100).toFixed(0)}`
-        : null
+    const dot = document.createElement('span')
+    dot.className = 'map-marker-dot'
 
-    const content = `
-      <div class="map-marker ${isActive ? 'active' : ''}" data-id="${cafe.id}">
-        <span class="map-marker-emoji">${emoji}</span>
-        <span class="map-marker-name">${cafe.name}</span>
-        ${scoreText ? `<span class="map-marker-score">${scoreText}점</span>` : ''}
-      </div>
-    `
+    const name = document.createElement('span')
+    name.className = 'map-marker-name'
+    name.textContent = cafe.name
+
+    container.appendChild(dot)
+    container.appendChild(name)
+
+    // 클릭 이벤트
+    container.addEventListener('click', (e) => {
+      e.stopPropagation()
+      onClick(cafe)
+    })
+
+    // 지도 드래그 방해 안 하도록
+    container.addEventListener('mousedown', (e) => e.stopPropagation())
+    container.addEventListener('touchstart', (e) => e.stopPropagation(), { passive: true })
 
     const overlay = new window.kakao.maps.CustomOverlay({
       position,
-      content,
-      yAnchor: 1.2,
+      content: container,
+      yAnchor: 1.3,
+      zIndex: isActive ? 10 : 1,
     })
 
     overlay.setMap(map)
     overlayRef.current = overlay
-
-    // 클릭 이벤트 — CustomOverlay는 DOM 이벤트로 처리
-    const el = overlay.getContent()
-    if (typeof el !== 'string') {
-      el.addEventListener('click', () => onClick(cafe))
-    }
 
     return () => {
       overlay.setMap(null)
     }
   }, [map, cafe, priorityOrder, isActive])
 
-  // CustomOverlay가 DOM 요소일 때 active 클래스 토글
-  useEffect(() => {
-    if (!overlayRef.current) return
-    const el = overlayRef.current.getContent()
-    if (typeof el !== 'string') {
-      el.querySelector('.map-marker')?.classList.toggle('active', isActive)
-    }
-  }, [isActive])
-
-  return null // 실제 렌더링은 카카오맵 CustomOverlay가 담당
+  return null
 }
 
 export default WorkspaceMarker

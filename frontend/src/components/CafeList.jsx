@@ -19,7 +19,7 @@ function CafeCard({ cafe, rank, priorityOrder, isActive, onClick }) {
     >
       <div className="cafe-card-top">
         <span className="cafe-card-name">
-          {rank === 1 ? '🥇 ' : rank === 2 ? '🥈 ' : rank === 3 ? '🥉 ' : ''}{cafe.name}
+          {rank === 1 ? '🥇 ' : rank === 2 ? '🥈 ' : rank === 3 ? '🥉 ' : `${rank}. `}{cafe.name}
         </span>
         {priorityOrder.length === 5 && (
           <span className="cafe-weighted-score">
@@ -55,7 +55,7 @@ function CafeList({ cafes, priorityOrder, activeCafeId, onCafeClick }) {
   }
 
   return (
-    <div className="cafe-cards-row">
+    <div className="cafe-cards-col">
       {sorted.map((cafe, idx) => (
         <CafeCard
           key={cafe.id}
