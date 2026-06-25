@@ -1,17 +1,65 @@
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import CafeList from './components/CafeList'
 import CategoryPrioritySelector from './components/CategoryPrioritySelector'
 import WorkspaceMarker from './components/WorkspaceMarker'
+import CafeDetailSheet from './components/CafeDetailSheet'
+import { calcWeightedScore } from './constants/scoreConfig'
 import './App.css'
 
 const API_BASE = 'http://localhost:8000'
 const SEONGDONG_CENTER = { lat: 37.5633, lng: 127.0371 }
+const MARKER_LIMIT = 30
+const LOCATION_CACHE_KEY = 'tracklook_user_location'
+const LOCATION_CACHE_TTL = 1000 * 60 * 10 // 10분
 
-// 바텀시트 높이 단계 (vh 기준)
 const SNAP_POINTS = {
-  collapsed: 15,   // 핸들만 보임
-  half: 45,        // 절반
-  full: 85,        // 거의 전체
+  collapsed: 15,
+  half: 45,
+  full: 85,
+}
+
+// Haversine 공식 — 두 좌표 사이 거리(m) 반환
+function getDistanceMeters(lat1, lng1, lat2, lng2) {
+  const R = 6371000
+  const toRad = (d) => (d * Math.PI) / 180
+  const dLat = toRad(lat2 - lat1)
+  const dLng = toRad(lng2 - lng1)
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLng / 2) ** 2
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
+}
+
+// 거리 m → 표시용 문자열
+export function formatDistance(meters) {
+  if (meters < 1000) return `${Math.round(meters)}m`
+  return `${(meters / 1000).toFixed(1)}km`
+}
+
+// 로컬스토리지 캐시 읽기 (10분 TTL)
+function loadCachedLocation() {
+  try {
+    const raw = localStorage.getItem(LOCATION_CACHE_KEY)
+    if (!raw) return null
+    const { lat, lng, timestamp } = JSON.parse(raw)
+    if (Date.now() - timestamp > LOCATION_CACHE_TTL) {
+      localStorage.removeItem(LOCATION_CACHE_KEY)
+      return null
+    }
+    return { lat, lng }
+  } catch {
+    return null
+  }
+}
+
+// 로컬스토리지 캐시 저장
+function saveLocationCache(lat, lng) {
+  try {
+    localStorage.setItem(
+      LOCATION_CACHE_KEY,
+      JSON.stringify({ lat, lng, timestamp: Date.now() })
+    )
+  } catch {}
 }
 
 function App() {
@@ -22,6 +70,14 @@ function App() {
   const [activeCafe, setActiveCafe] = useState(null)
   const [map, setMap] = useState(null)
   const [mobilePanel, setMobilePanel] = useState(false)
+  // 상세 시트
+  const [detailCafe, setDetailCafe] = useState(null)
+
+  // 위치 관련 상태
+  const [locationPopup, setLocationPopup] = useState(false)
+  const [userLocation, setUserLocation] = useState(null)   // { lat, lng }
+  const [locationError, setLocationError] = useState(null)
+  const [locLoading, setLocLoading] = useState(false)
 
   // 바텀시트 드래그 상태
   const [sheetHeight, setSheetHeight] = useState(SNAP_POINTS.half)
@@ -51,7 +107,13 @@ function App() {
     }
   }, [])
 
-  // 카페 데이터
+  // 앱 로드 시 캐시된 위치 복원 (팝업 없이)
+  useEffect(() => {
+    const cached = loadCachedLocation()
+    if (cached) setUserLocation(cached)
+  }, [])
+
+  // 카페 데이터 fetch
   useEffect(() => {
     fetch(`${API_BASE}/api/spaces/`)
       .then((r) => { if (!r.ok) throw new Error(`서버 오류 ${r.status}`); return r.json() })
@@ -60,8 +122,65 @@ function App() {
       .finally(() => setLoading(false))
   }, [])
 
+  // 팝업 허용 클릭 → geolocation 요청
+  const handleLocationAllow = useCallback(() => {
+    setLocationPopup(false)
+    setLocationError(null)
+    setLocLoading(true)
+
+   navigator.geolocation.getCurrentPosition(
+     (pos) => {
+       // TODO: 배포 시 아래 두 줄 지우고 pos.coords 사용. 구현 중 위치 성동구로 고정하는 코드
+       const lat = SEONGDONG_CENTER.lat
+       const lng = SEONGDONG_CENTER.lng
+       setUserLocation({ lat, lng })
+       saveLocationCache(lat, lng)
+       setLocLoading(false)
+        if (map) map.panTo(new window.kakao.maps.LatLng(lat, lng))
+      },
+
+      (err) => {
+        setLocLoading(false)
+        const msg =
+          err.code === 1 ? '위치 권한이 거부되었어요. 브라우저 설정에서 허용해 주세요.'
+          : err.code === 2 ? '현재 위치를 가져올 수 없어요.'
+          : '위치 요청 시간이 초과되었어요.'
+        setLocationError(msg)
+      },
+      { enableHighAccuracy: true, timeout: 10000 }
+    )
+  }, [map])
+
+  // 위치 해제
+  const handleLocationReset = useCallback(() => {
+    setUserLocation(null)
+    setLocationError(null)
+    localStorage.removeItem(LOCATION_CACHE_KEY)
+    if (map) map.panTo(new window.kakao.maps.LatLng(SEONGDONG_CENTER.lat, SEONGDONG_CENTER.lng))
+  }, [map])
+
+  // top30 계산
+  // 우선순위 5개 완성 → 가중치 점수순
+  // 위치만 있을 때 → 거리순
+  // 둘 다 없으면 → API 순서 그대로
+  const top30 = useMemo(() => {
+    let list = [...cafes]
+    if (priorityOrder.length === 5) {
+      list.sort((a, b) => calcWeightedScore(b, priorityOrder) - calcWeightedScore(a, priorityOrder))
+    } else if (userLocation) {
+      list.sort((a, b) => {
+        const dA = getDistanceMeters(userLocation.lat, userLocation.lng, parseFloat(a.latitude), parseFloat(a.longitude))
+        const dB = getDistanceMeters(userLocation.lat, userLocation.lng, parseFloat(b.latitude), parseFloat(b.longitude))
+        return dA - dB
+      })
+    }
+    return list.slice(0, MARKER_LIMIT)
+  }, [cafes, priorityOrder, userLocation])
+
+  // 카페 클릭 → 지도 이동 + 상세 시트 열기
   const handleCafeClick = (cafe) => {
     setActiveCafe(cafe)
+    setDetailCafe(cafe)
     if (map) {
       map.panTo(new window.kakao.maps.LatLng(
         parseFloat(cafe.latitude),
@@ -87,12 +206,11 @@ function App() {
     setSheetHeight(newHeight)
   }, [])
 
-  // 드래그 끝 → 가장 가까운 스냅 포인트로
+  // 드래그 끝
   const onDragEnd = useCallback(() => {
     if (!isDragging.current) return
     isDragging.current = false
     document.body.style.userSelect = ''
-
     const points = Object.values(SNAP_POINTS)
     const closest = points.reduce((prev, curr) =>
       Math.abs(curr - sheetHeight) < Math.abs(prev - sheetHeight) ? curr : prev
@@ -124,13 +242,18 @@ function App() {
     }
   }, [onDragMove, onDragEnd])
 
+  const listTitle =
+    priorityOrder.length === 5 ? '🎯 최적 카페 순위'
+    : userLocation ? '📍 내 주변 카페'
+    : '카페 목록'
+
   return (
     <div className="app-root">
-      {/* 카카오맵 전체 배경 */}
+      {/* 카카오맵 */}
       <div ref={mapRef} className="kakao-map" />
 
-      {/* 마커들 */}
-      {map && cafes.map((cafe) => (
+      {/* 마커: top30만 렌더링 */}
+      {map && top30.map((cafe) => (
         <WorkspaceMarker
           key={cafe.id}
           map={map}
@@ -141,11 +264,64 @@ function App() {
         />
       ))}
 
+      {/* 카페 상세 시트 */}
+      <CafeDetailSheet
+        cafe={detailCafe}
+        onClose={() => setDetailCafe(null)}
+      />
+
+      {/* ── 위치 권한 동의 팝업 ── */}
+      {locationPopup && (
+        <div className="location-popup-backdrop" onClick={() => setLocationPopup(false)}>
+          <div className="location-popup" onClick={(e) => e.stopPropagation()}>
+            <div className="location-popup-icon">📍</div>
+            <h3 className="location-popup-title">내 위치를 사용할까요?</h3>
+            <p className="location-popup-desc">
+              현재 위치 기반으로 가까운 카페를 먼저 보여드려요.<br />
+              위치 정보는 내 기기에만 저장되며 서버로 전송되지 않아요.
+            </p>
+            <div className="location-popup-btns">
+              <button className="location-btn-deny" onClick={() => setLocationPopup(false)}>
+                괜찮아요
+              </button>
+              <button className="location-btn-allow" onClick={handleLocationAllow}>
+                허용하기
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* 플로팅 헤더 */}
       <header className="float-header">
         <span className="header-logo">Track<span>Look</span> 🗺️</span>
         <span className="header-sub">성동구 카공 카페 찾기</span>
       </header>
+
+      {/* 위치 버튼 (헤더 우측 하단) */}
+      <div className="float-location-btn-wrap">
+        {locLoading ? (
+          <button className="location-inactive-btn" disabled>
+            <span className="loc-spinner" /> 위치 찾는 중…
+          </button>
+        ) : userLocation ? (
+          <button className="location-active-btn" onClick={handleLocationReset} title="클릭하면 위치 해제">
+            📍 내 위치 ON
+          </button>
+        ) : (
+          <button className="location-inactive-btn" onClick={() => setLocationPopup(true)}>
+            📍 내 위치
+          </button>
+        )}
+      </div>
+
+      {/* 위치 오류 토스트 */}
+      {locationError && (
+        <div className="location-error-toast">
+          ⚠️ {locationError}
+          <button className="toast-close" onClick={() => setLocationError(null)}>✕</button>
+        </div>
+      )}
 
       {/* PC: 플로팅 우선순위 패널 */}
       <div className="float-priority">
@@ -156,10 +332,7 @@ function App() {
       </div>
 
       {/* 모바일: 우선순위 토글 버튼 */}
-      <button
-        className="mobile-priority-btn"
-        onClick={() => setMobilePanel(true)}
-      >
+      <button className="mobile-priority-btn" onClick={() => setMobilePanel(true)}>
         ✨ 우선순위 설정 {priorityOrder.length > 0 && `(${priorityOrder.length}/5)`}
       </button>
 
@@ -180,13 +353,12 @@ function App() {
         </div>
       )}
 
-      {/* 드래그 가능한 바텀시트 */}
+      {/* 드래그 바텀시트 */}
       <div
         ref={sheetRef}
         className="bottom-sheet"
         style={{ height: `${sheetHeight}vh` }}
       >
-        {/* 드래그 핸들 */}
         <div
           className="sheet-handle-area"
           onMouseDown={(e) => onDragStart(e.clientY)}
@@ -194,14 +366,11 @@ function App() {
         >
           <div className="list-handle" />
           <div className="list-top">
-            <span className="list-title">
-              {priorityOrder.length === 5 ? '🎯 최적 카페 순위' : '카페 목록'}
-            </span>
-            {!loading && <span className="list-count">{cafes.length}곳</span>}
+            <span className="list-title">{listTitle}</span>
+            {!loading && <span className="list-count">{top30.length}곳</span>}
           </div>
         </div>
 
-        {/* 스크롤 가능한 카드 영역 */}
         <div className="sheet-scroll">
           {loading && (
             <div className="empty-state">
@@ -218,8 +387,9 @@ function App() {
           )}
           {!loading && !error && (
             <CafeList
-              cafes={cafes}
+              cafes={top30}
               priorityOrder={priorityOrder}
+              userLocation={userLocation}
               activeCafeId={activeCafe?.id}
               onCafeClick={handleCafeClick}
             />
