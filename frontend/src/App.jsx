@@ -4,6 +4,8 @@ import CategoryPrioritySelector from './components/CategoryPrioritySelector'
 import WorkspaceMarker from './components/WorkspaceMarker'
 import CafeDetailSheet from './components/CafeDetailSheet'
 import { calcWeightedScore } from './constants/scoreConfig'
+import AuthModal from './components/AuthModal'
+import { getSavedUsername, logout } from './utils/auth'
 import './App.css'
 
 const API_BASE = 'http://localhost:8000'
@@ -72,6 +74,11 @@ function App() {
   const [mobilePanel, setMobilePanel] = useState(false)
   // 상세 시트
   const [detailCafe, setDetailCafe] = useState(null)
+  // 인증
+  const [authModal, setAuthModal] = useState(false)
+  const [currentUser, setCurrentUser] = useState(
+    () => getSavedUsername()
+  )
 
   // 위치 관련 상태
   const [locationPopup, setLocationPopup] = useState(false)
@@ -86,6 +93,12 @@ function App() {
   const startHeight = useRef(0)
   const sheetRef = useRef(null)
   const mapRef = useRef(null)
+
+  // 로그아웃
+  const handleLogout = async () => {
+    await logout()
+    setCurrentUser(null)
+  }
 
   // 카카오맵 초기화
   useEffect(() => {
@@ -128,17 +141,14 @@ function App() {
     setLocationError(null)
     setLocLoading(true)
 
-   navigator.geolocation.getCurrentPosition(
-     (pos) => {
-       // TODO: 배포 시 아래 두 줄 지우고 pos.coords 사용. 구현 중 위치 성동구로 고정하는 코드
-       const lat = SEONGDONG_CENTER.lat
-       const lng = SEONGDONG_CENTER.lng
-       setUserLocation({ lat, lng })
-       saveLocationCache(lat, lng)
-       setLocLoading(false)
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const { latitude: lat, longitude: lng } = pos.coords
+        setUserLocation({ lat, lng })
+        saveLocationCache(lat, lng)
+        setLocLoading(false)
         if (map) map.panTo(new window.kakao.maps.LatLng(lat, lng))
       },
-
       (err) => {
         setLocLoading(false)
         const msg =
@@ -267,8 +277,18 @@ function App() {
       {/* 카페 상세 시트 */}
       <CafeDetailSheet
         cafe={detailCafe}
+        currentUser={currentUser}
         onClose={() => setDetailCafe(null)}
+        onLoginRequest={() => setAuthModal(true)}
       />
+
+      {/* 로그인/회원가입 모달 */}
+      {authModal && (
+        <AuthModal
+          onClose={() => setAuthModal(false)}
+          onLogin={(username) => setCurrentUser(username)}
+        />
+      )}
 
       {/* ── 위치 권한 동의 팝업 ── */}
       {locationPopup && (
@@ -296,6 +316,14 @@ function App() {
       <header className="float-header">
         <span className="header-logo">Track<span>Look</span> 🗺️</span>
         <span className="header-sub">성동구 카공 카페 찾기</span>
+        {currentUser ? (
+          <div className="header-auth">
+            <span className="header-username">{currentUser}</span>
+            <button className="header-logout-btn" onClick={handleLogout}>로그아웃</button>
+          </div>
+        ) : (
+          <button className="header-login-btn" onClick={() => setAuthModal(true)}>로그인</button>
+        )}
       </header>
 
       {/* 위치 버튼 (헤더 우측 하단) */}

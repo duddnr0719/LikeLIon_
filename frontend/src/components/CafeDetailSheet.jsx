@@ -1,84 +1,174 @@
 import { useState, useEffect } from 'react'
 import { SCORE_CATEGORIES } from '../constants/scoreConfig'
+import { authFetch } from '../utils/auth'
 
 const API_BASE = 'http://localhost:8000'
 
-// 별점 0.5 단위 표시 컴포넌트
-function StarRating({ score, max = 5 }) {
-  const stars = []
-  for (let i = 1; i <= max; i++) {
-    if (score >= i) {
-      stars.push(<span key={i} className="star full">★</span>)
-    } else if (score >= i - 0.5) {
-      stars.push(<span key={i} className="star half">★</span>)
-    } else {
-      stars.push(<span key={i} className="star empty">★</span>)
-    }
-  }
-  return <span className="star-row">{stars}</span>
+function calcAvgScore(cafe) {
+  const keys = ['score_plug', 'score_wifi', 'score_noise', 'score_comfort']
+  const values = keys.map((k) => cafe[k] ?? 0)
+  return values.reduce((s, v) => s + v, 0) / values.length
 }
 
-// 날짜 포맷 YYYY.MM.DD
+function Stars({ score, size = 13 }) {
+  return (
+    <div className="detail-stars">
+      {[1, 2, 3, 4, 5].map((i) => (
+        <span
+          key={i}
+          className={`detail-star ${score >= i ? 'full' : score >= i - 0.5 ? 'half' : 'empty'}`}
+          style={{ fontSize: size }}
+        >★</span>
+      ))}
+    </div>
+  )
+}
+
 function formatDate(iso) {
   const d = new Date(iso)
   return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}`
 }
 
-// 지표별 점수 행
-function ScoreRow({ emoji, label, score }) {
-  const pct = score != null ? (score / 5) * 100 : 0
-  return (
-    <div className="detail-score-row">
-      <span className="detail-score-label">
-        <span className="detail-score-emoji">{emoji}</span>
-        {label}
-      </span>
-      <div className="detail-score-bar-wrap">
-        <div className="detail-score-bar">
-          <div className="detail-score-bar-fill" style={{ width: `${pct}%` }} />
-        </div>
-        <span className="detail-score-value">
-          {score != null ? score.toFixed(1) : '-'}
-        </span>
-      </div>
-    </div>
-  )
-}
-
-// 리뷰 카드
-function ReviewCard({ review }) {
-  // SpaceReview에는 score_table 없음 → 4개 지표만 표시
-  const reviewCategories = SCORE_CATEGORIES.filter((c) => c.key !== 'score_table')
-  const avg =
-    reviewCategories.reduce((sum, c) => sum + (review[c.key] ?? 0), 0) /
-    reviewCategories.length
+function ReviewCard({ review, currentUser, onDelete }) {
+  const categories = SCORE_CATEGORIES.filter((c) => c.key !== 'score_table')
+  const avg = categories.reduce((s, c) => s + (review[c.key] ?? 0), 0) / categories.length
+  const isOwner = currentUser && review.username === currentUser
 
   return (
     <div className="review-card">
       <div className="review-card-top">
-        <StarRating score={avg} />
-        <span className="review-date">{formatDate(review.created_at)}</span>
+        <Stars score={avg} size={12} />
+        <div className="review-card-meta">
+          <span className="review-date">{formatDate(review.created_at)}</span>
+          {isOwner && (
+            <button className="review-delete-btn" onClick={() => onDelete(review.id)}>삭제</button>
+          )}
+        </div>
       </div>
-      <div className="review-scores">
-        {reviewCategories.map((cat) => (
-          <span key={cat.key} className="review-score-chip">
+      <div className="review-chips">
+        {categories.map((cat) => (
+          <span key={cat.key} className="review-chip">
             {cat.emoji} {review[cat.key]?.toFixed(1) ?? '-'}
           </span>
         ))}
       </div>
-      {review.comment && (
-        <p className="review-comment">{review.comment}</p>
-      )}
+      {review.comment && <p className="review-comment">{review.comment}</p>}
     </div>
   )
 }
 
-function CafeDetailSheet({ cafe, onClose }) {
+// 별점 선택 컴포넌트 (0.5 단위)
+function StarPicker({ value, onChange }) {
+  return (
+    <div className="star-picker">
+      {[1, 2, 3, 4, 5].map((i) => (
+        <span key={i} className="star-picker-wrap">
+          {/* 왼쪽 절반 (0.5) */}
+          <span
+            className={`star-pick ${value >= i - 0.5 ? 'on' : ''}`}
+            style={{ clipPath: 'inset(0 50% 0 0)' }}
+            onClick={() => onChange(i - 0.5)}
+          >★</span>
+          {/* 오른쪽 절반 (1.0) */}
+          <span
+            className={`star-pick ${value >= i ? 'on' : ''}`}
+            style={{ clipPath: 'inset(0 0 0 50%)' }}
+            onClick={() => onChange(i)}
+          >★</span>
+        </span>
+      ))}
+      <span className="star-picker-val">{value.toFixed(1)}</span>
+    </div>
+  )
+}
+
+// 리뷰 작성 폼
+function ReviewForm({ cafeId, onSubmitted, onLoginRequest, currentUser }) {
+  const reviewableCategories = SCORE_CATEGORIES.filter((c) => c.key !== 'score_table')
+
+  const initScores = () =>
+    Object.fromEntries(reviewableCategories.map((c) => [c.key, 3.0]))
+
+  const [scores, setScores] = useState(initScores)
+  const [comment, setComment] = useState('')
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
+
+  const handleSubmit = async () => {
+    setLoading(true)
+    setError(null)
+    try {
+      const res = await authFetch(`${API_BASE}/api/spaces/${cafeId}/reviews/`, {
+        method: 'POST',
+        body: JSON.stringify({ ...scores, comment }),
+      })
+      if (res.status === 401) { onLoginRequest(); return }
+      const data = await res.json()
+      if (!res.ok) {
+        // 중복 리뷰 처리
+        const msg = data?.non_field_errors?.[0] || '리뷰 작성에 실패했어요.'
+        throw new Error(msg)
+      }
+      onSubmitted(data)
+      setScores(initScores())
+      setComment('')
+    } catch (e) {
+      setError(e.message)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  if (!currentUser) {
+    return (
+      <div className="review-form-login">
+        <p>리뷰를 작성하려면 로그인이 필요해요</p>
+        <button className="review-login-btn" onClick={onLoginRequest}>로그인하기</button>
+      </div>
+    )
+  }
+
+  return (
+    <div className="review-form">
+      <p className="review-form-title">리뷰 작성</p>
+
+      {reviewableCategories.map((cat) => (
+        <div key={cat.key} className="review-form-row">
+          <span className="review-form-label">
+            <span>{cat.emoji}</span> {cat.label}
+          </span>
+          <StarPicker
+            value={scores[cat.key]}
+            onChange={(v) => setScores((prev) => ({ ...prev, [cat.key]: v }))}
+          />
+        </div>
+      ))}
+
+      <textarea
+        className="review-textarea"
+        placeholder="방문 후기를 남겨주세요 (선택)"
+        value={comment}
+        onChange={(e) => setComment(e.target.value)}
+        rows={3}
+      />
+
+      {error && <p className="review-form-error">⚠️ {error}</p>}
+
+      <button className="review-submit-btn" onClick={handleSubmit} disabled={loading}>
+        {loading ? '제출 중…' : '리뷰 등록'}
+      </button>
+    </div>
+  )
+}
+
+function CafeDetailSheet({ cafe, currentUser, onClose, onLoginRequest }) {
   const [reviews, setReviews] = useState([])
   const [reviewLoading, setReviewLoading] = useState(true)
   const [reviewError, setReviewError] = useState(null)
 
-  // 리뷰 fetch
+  // 내가 이미 리뷰를 썼는지 확인
+  const myReview = reviews.find((r) => r.username === currentUser)
+
   useEffect(() => {
     if (!cafe) return
     setReviewLoading(true)
@@ -90,76 +180,99 @@ function CafeDetailSheet({ cafe, onClose }) {
       .finally(() => setReviewLoading(false))
   }, [cafe])
 
+  // 리뷰 작성 완료 → 목록에 추가
+  const handleSubmitted = (newReview) => {
+    setReviews((prev) => [newReview, ...prev])
+  }
+
+  // 리뷰 삭제
+  const handleDelete = async (reviewId) => {
+    try {
+      const res = await authFetch(
+        `${API_BASE}/api/spaces/${cafe.id}/reviews/${reviewId}/`,
+        { method: 'DELETE' }
+      )
+      if (res.ok || res.status === 204) {
+        setReviews((prev) => prev.filter((r) => r.id !== reviewId))
+      }
+    } catch {}
+  }
+
   if (!cafe) return null
 
-  // score_table: 0.0 or 5.0 → 고정 뱃지
   const hasTable = parseFloat(cafe.score_table) === 5
-
-  // 리뷰 가능한 카테고리 (score_table 제외)
+  const avgScore = calcAvgScore(cafe)
   const reviewableCategories = SCORE_CATEGORIES.filter((c) => c.key !== 'score_table')
 
   return (
-    // backdrop 클릭 시 닫힘
     <div className="detail-backdrop" onClick={onClose}>
       <div className="detail-sheet" onClick={(e) => e.stopPropagation()}>
 
-        {/* 핸들 + 헤더 */}
         <div className="detail-handle-wrap">
           <div className="list-handle" />
         </div>
 
         <div className="detail-scroll">
-          {/* 카페 기본 정보 */}
+
+          {/* 기본 정보 */}
           <div className="detail-header">
             <div className="detail-title-row">
               <h2 className="detail-name">{cafe.name}</h2>
-              {hasTable && (
-                <span className="detail-table-badge">🪑 넓은 테이블</span>
-              )}
+              {hasTable && <span className="detail-table-badge">🪑 넓은 테이블</span>}
             </div>
             <p className="detail-address">📌 {cafe.address}</p>
-            <div className="detail-meta">
-              {cafe.phone && (
-                <a className="detail-meta-btn" href={`tel:${cafe.phone}`}>📞 {cafe.phone}</a>
-              )}
-              {cafe.kakao_url && (
-                <a className="detail-meta-btn" href={cafe.kakao_url} target="_blank" rel="noreferrer">
-                  🗺️ 카카오맵
-                </a>
-              )}
-            </div>
           </div>
 
           <hr className="detail-divider" />
 
-          {/* 5대 지표 점수 */}
+          {/* 점수 섹션 */}
           <section className="detail-section">
             <h3 className="detail-section-title">카공 지표 점수</h3>
-            <div className="detail-scores">
-              {reviewableCategories.map((cat) => (
-                <ScoreRow
-                  key={cat.key}
-                  emoji={cat.emoji}
-                  label={cat.label}
-                  score={cafe[cat.key]}
-                />
-              ))}
-              {/* 테이블은 고정 뱃지로만 */}
-              <div className="detail-score-row">
-                <span className="detail-score-label">
-                  <span className="detail-score-emoji">🪑</span>테이블
-                </span>
-                <span className={`detail-table-tag ${hasTable ? 'good' : 'bad'}`}>
-                  {hasTable ? '넓고 편함' : '보통'}
-                </span>
+            <div className="detail-score-layout">
+              <div className="detail-score-big">
+                <span className="detail-score-num">{avgScore.toFixed(1)}</span>
+                <Stars score={avgScore} size={13} />
+                <span className="detail-score-review-count">리뷰 {cafe.total_review_count}개</span>
+              </div>
+              <div className="detail-score-bars">
+                {reviewableCategories.map((cat) => {
+                  const pct = ((cafe[cat.key] ?? 0) / 5) * 100
+                  return (
+                    <div key={cat.key} className="detail-bar-row">
+                      <span className="detail-bar-icon">{cat.emoji}</span>
+                      <div className="detail-bar-wrap">
+                        <div className="detail-bar-fill" style={{ width: `${pct}%` }} />
+                      </div>
+                      <span className="detail-bar-val">
+                        {cafe[cat.key] != null ? cafe[cat.key].toFixed(1) : '-'}
+                      </span>
+                    </div>
+                  )
+                })}
+                <div className="detail-bar-row">
+                  <span className="detail-bar-icon">🪑</span>
+                  <span className={`detail-table-tag ${hasTable ? 'good' : 'bad'}`}>
+                    {hasTable ? '넓고 편함' : '보통'}
+                  </span>
+                </div>
               </div>
             </div>
-            <p className="detail-review-count">
-              리뷰 {cafe.total_review_count}개 기반
-            </p>
           </section>
 
           <hr className="detail-divider" />
+
+          {/* 리뷰 작성 폼: 이미 쓴 리뷰 없을 때만 표시 */}
+          {!myReview && (
+            <>
+              <ReviewForm
+                cafeId={cafe.id}
+                currentUser={currentUser}
+                onSubmitted={handleSubmitted}
+                onLoginRequest={onLoginRequest}
+              />
+              <hr className="detail-divider" />
+            </>
+          )}
 
           {/* 리뷰 목록 */}
           <section className="detail-section">
@@ -171,7 +284,6 @@ function CafeDetailSheet({ cafe, onClose }) {
                 <p>리뷰 불러오는 중</p>
               </div>
             )}
-
             {reviewError && (
               <div className="empty-state">
                 <span className="empty-state-icon">⚠️</span>
@@ -179,25 +291,27 @@ function CafeDetailSheet({ cafe, onClose }) {
                 <small>{reviewError}</small>
               </div>
             )}
-
             {!reviewLoading && !reviewError && reviews.length === 0 && (
               <div className="empty-state">
                 <span className="empty-state-icon">✍️</span>
                 <p>아직 리뷰가 없어요</p>
               </div>
             )}
-
             {!reviewLoading && !reviewError && reviews.length > 0 && (
               <div className="review-list">
                 {reviews.map((rv) => (
-                  <ReviewCard key={rv.id} review={rv} />
+                  <ReviewCard
+                    key={rv.id}
+                    review={rv}
+                    currentUser={currentUser}
+                    onDelete={handleDelete}
+                  />
                 ))}
               </div>
             )}
           </section>
         </div>
 
-        {/* 닫기 버튼 */}
         <button className="detail-close-btn" onClick={onClose}>✕</button>
       </div>
     </div>
