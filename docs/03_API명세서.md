@@ -42,7 +42,8 @@ Authorization: Bearer <access_token>
 | 5 | `GET` | `/api/spaces/` | 카페 목록 조회 (필터·정렬) | ❌ | ✅ |
 | 6 | `GET` | `/api/spaces/<id>/` | 카페 단일 상세 조회 | ❌ | ✅ |
 | 7 | `GET` | `/api/spaces/<id>/reviews/` | 카페 리뷰 목록 조회 | ❌ | ✅ |
-| 8 | `POST` | `/api/spaces/<id>/reviews/` | 카페 리뷰 등록 | ❌ | ✅ |
+| 8 | `POST` | `/api/spaces/<id>/reviews/` | 카페 리뷰 등록 | ✅ | ✅ |
+| 9 | `DELETE` | `/api/spaces/<id>/reviews/<review_id>/` | 카페 리뷰 삭제 | ✅ | ✅ |
 
 > 상태: ⬜ 미구현 / 🟡 개발중 / ✅ 완료
 
@@ -57,13 +58,11 @@ Authorization: Bearer <access_token>
 | 필드 | 타입 | 필수 | 설명 |
 |---|---|---|---|
 | `username` | string | ✅ | 사용자명 (중복 불가) |
-| `email` | string | ✅ | 이메일 |
 | `password` | string | ✅ | 비밀번호 (Django 유효성 검사 적용) |
 
 ```json
 {
   "username": "myuser",
-  "email": "my@test.com",
   "password": "Test1234!"
 }
 ```
@@ -295,6 +294,36 @@ curl "http://localhost:8000/api/spaces/?min_score_noise=4&min_score_table=5"
 **Response — 400 Bad Request**
 ```json
 { "score_plug": ["이 필드는 필수 항목입니다."] }
+```
+
+**Response — 403 Forbidden** (이미 리뷰 작성한 경우)
+```json
+{ "detail": "이미 이 카페에 리뷰를 작성했습니다." }
+```
+
+---
+
+### 9️⃣ `DELETE /api/spaces/<id>/reviews/<review_id>/` — 리뷰 삭제
+
+인증된 사용자가 본인이 작성한 리뷰를 삭제합니다.
+
+**Path Parameters**
+
+| 파라미터 | 타입 | 설명 |
+|---|---|---|
+| `id` | integer | 카페 고유 ID |
+| `review_id` | integer | 삭제할 리뷰 ID |
+
+**Response — 204 No Content** : 삭제 성공 (본문 없음)
+
+**Response — 403 Forbidden** (본인 리뷰가 아닌 경우)
+```json
+{ "detail": "본인 리뷰만 삭제할 수 있습니다." }
+```
+
+**Response — 404 Not Found**
+```json
+{ "detail": "찾을 수 없습니다." }
 ```
 
 ---
