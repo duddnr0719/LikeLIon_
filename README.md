@@ -32,6 +32,7 @@ cp .env.example .env
 # DB 초기화 및 데이터 로드
 python manage.py migrate
 python manage.py loaddata seongdong_cafes   # 성동구 카페 258개 데이터 즉시 로드
+python manage.py load_raw_reviews           # 블로그 리뷰 3,456건 로드 (data/reviews_raw.csv)
 
 # 서버 실행
 python manage.py runserver
@@ -79,6 +80,7 @@ npm run dev
 | `GET` | `/api/spaces/<id>/reviews/` | 리뷰 목록 조회 | 불필요 |
 | `POST` | `/api/spaces/<id>/reviews/` | 리뷰 작성 | **필요** |
 | `DELETE` | `/api/spaces/<id>/reviews/<review_id>/` | 리뷰 삭제 (본인만) | **필요** |
+| `GET` | `/api/spaces/<id>/raw-reviews/` | 블로그 리뷰 목록 조회 | 불필요 |
 
 ---
 
