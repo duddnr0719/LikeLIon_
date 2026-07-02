@@ -4,3 +4,4 @@ pip install -r requirements.txt
 python manage.py collectstatic --noinput
 python manage.py migrate
 python manage.py loaddata spaces/fixtures/seongdong_cafes.json
+python manage.py load_raw_reviews
