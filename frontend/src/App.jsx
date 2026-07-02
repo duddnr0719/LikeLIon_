@@ -8,7 +8,7 @@ import AuthModal from './components/AuthModal'
 import { getSavedUsername, logout } from './utils/auth'
 import './App.css'
 
-const API_BASE = 'http://localhost:8000'
+const API_BASE = import.meta.env.VITE_API_BASE ?? 'http://localhost:8000'
 const SEONGDONG_CENTER = { lat: 37.5633, lng: 127.0371 }
 const MARKER_LIMIT = 30
 const RADIUS_M = 2000 // 2km 반경
