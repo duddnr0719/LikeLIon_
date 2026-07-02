@@ -144,7 +144,8 @@ function App() {
 
     // 🎬 발표 영상 촬영용 하드코딩 — 실제 위치 대신 성동구 중심 사용
     // 나중에 풀려면 아래 DEMO_MODE를 false로 바꾸면 됨
-    const DEMO_MODE = false
+    const DEMO_MODE = true
+
 
     if (DEMO_MODE) {
       const { lat, lng } = SEONGDONG_CENTER
@@ -177,6 +178,8 @@ function App() {
 
   // 위치 해제
   const handleLocationReset = useCallback(() => {
+    if (!window.kakao?.maps) return; 
+    setLocationPopup(false)
     setUserLocation(null)
     setLocationError(null)
     localStorage.removeItem(LOCATION_CACHE_KEY)
@@ -212,17 +215,20 @@ function App() {
     return list.slice(0, MARKER_LIMIT)
   }, [cafes, priorityOrder, userLocation])
 
-  // 카페 클릭 → 지도 이동 + 상세 시트 열기
-  const handleCafeClick = (cafe) => {
-    setActiveCafe(cafe)
-    setDetailCafe(cafe)
-    if (map) {
-      map.panTo(new window.kakao.maps.LatLng(
-        parseFloat(cafe.latitude),
-        parseFloat(cafe.longitude)
-      ))
-    }
+ // 카페 클릭 → 지도 이동 + 상세 시트 열기
+const handleCafeClick = (cafe) => {
+  if (!window.kakao?.maps) return; 
+
+  setActiveCafe(cafe)
+  setDetailCafe(cafe)
+  
+  if (map) {
+    map.panTo(new window.kakao.maps.LatLng(
+      parseFloat(cafe.latitude),
+      parseFloat(cafe.longitude)
+    ))
   }
+}
 
   // 드래그 시작
   const onDragStart = useCallback((clientY) => {
