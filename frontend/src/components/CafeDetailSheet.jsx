@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { SCORE_CATEGORIES } from '../constants/scoreConfig'
 import { authFetch } from '../utils/auth'
 
-const API_BASE = 'http://localhost:8000'
+const API_BASE = import.meta.env.VITE_API_BASE_URL
 
 function calcAvgScore(cafe) {
   const keys = ['score_plug', 'score_wifi', 'score_noise', 'score_comfort']
