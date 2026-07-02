@@ -144,7 +144,7 @@ function App() {
 
     // 🎬 발표 영상 촬영용 하드코딩 — 실제 위치 대신 성동구 중심 사용
     // 나중에 풀려면 아래 DEMO_MODE를 false로 바꾸면 됨
-    const DEMO_MODE = true
+    const DEMO_MODE = false
 
 
     if (DEMO_MODE) {
